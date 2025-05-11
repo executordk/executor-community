@@ -2,10 +2,11 @@
 
 Welcome! This repository is the central place for the Executor (Launcher for Windows) community for resources like:
 
-*   **Skins:** Customize the look and feel of Executor. ✨
-*   **Keyword Collections:** Handy sets of keywords import files for specific programs or tasks. 🔑
-*   **Cheatsheets & Guides:** Quick references and tips to get the most out of Executor. 📄
-*   **Other assets:** Like icons, images etc. 🎨
+*   **Keywords import files:** Handy sets of keywords import files. 🔥
+*   **Skins:** Customize the look and feel of Executor. 🎨
+*   **Cheatsheets:** Quick references and tips to get the most out of Executor. ⭐
+*   **Graphical assets:** Like icons, images. 🖼
+*   **Other:** Other assets etc. 📃
 
 ## Getting Resources
 
