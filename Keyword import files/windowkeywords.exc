@@ -1,0 +1,92 @@
+[main]
+description=Manipulate the active window and Executor window
+
+[W]
+keywords=adjust
+command=$WADJUST$
+comment=Adjust window, add/subtract to current size and position [width,height,left,top,screen]
+param=$P$
+
+[W]
+keywords=arrange
+command=$WARRANGE$
+comment=Arrange window size and/or position [width,height,left,right,screen]
+param=$P$
+
+[W]
+keywords=bottom
+command=$WBOTTOM$
+comment=Align window to bottom [optional-resize-percentage]
+param=$P$
+
+[W]
+keywords=center
+command=$WCENTER$
+comment=Center current window [optional-screen-number]
+param=$P$
+
+[W]
+keywords=close
+command=$WCLOSE$
+comment=Close current window
+
+[W]
+keywords=height
+command=$WMAXHEIGHT$
+comment=Maximize window height
+param=$P$
+
+[W]
+keywords=left
+command=$WLEFT$
+comment=Align window to the left [optional-resize-percentage]
+param=$P$
+
+[W]
+keywords=maximize
+command=$WMAXIMIZE$
+comment=Maximize current window
+
+[W]
+keywords=minimize
+command=$WMINIMIZE$
+comment=Minimize current window
+
+[W]
+keywords=open
+command=$WOPEN$
+comment=Open current window
+
+[W]
+keywords=resize
+command=$WRESIZE$
+comment=Resize window [width,height,(center)] Example: 800,600,center
+param=$P$
+
+[W]
+keywords=restore
+command=$WRESTORE$
+comment=Restore current window
+
+[W]
+keywords=right
+command=$WRIGHT$
+comment=Align window right [optional-resize-percentage]
+param=$P$
+
+[W]
+keywords=top
+command=$WTOP$
+comment=Align window to top [optional-resize-percentage]
+param=$P$
+
+[W]
+keywords=width
+command=$WMAXWIDTH$
+comment=Maximize window width
+
+[W]
+keywords=xarrange
+command=$WEXECUTOR$
+comment=Arrange Executor size and/or position [width,height,(center)left,right,screen]
+param=$P$

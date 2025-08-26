@@ -1,0 +1,87 @@
+[main]
+description=Internal browser keywords and examples (if using, consider renaming keywords to shorter names)
+
+[W]
+keywords=browsenews
+command=https://cnn.com$BROWSER$
+comment=Example open CNN in internal browser
+
+[W]
+keywords=browsenewsnofocus
+command=https://cnn.com$BROWSERNOFOCUS$
+comment=Example open CNN in internal browser, but keep focus in input field
+
+[W]
+keywords=browserback
+command=$BROWSERBACK$
+comment=Navigate back in internal browser
+
+[W]
+keywords=browserclear
+command=$BROWSERCLEAR$
+comment=Clear and hide the current internal browser page
+
+[W]
+keywords=browserconnectdemo
+command=https://executor.dk/connect_demo.html$BROWSER$$BCONNECT$
+comment=Open demo page connecting to executor
+
+[W]
+keywords=browserend
+command=$BROWSEREND$
+comment=End the browser session so it's not running in background
+
+[W]
+keywords=browserexpand
+command=$BROWSEREXPAND$
+comment=Open current browser url in external browser
+
+[W]
+keywords=browserflushall
+command=$BROWSERFLUSHALL$
+comment=Flush all persistant data and history from internal browser
+
+[W]
+keywords=browserforward
+command=$BROWSERFORWARD$
+comment=Navigate forward in internal browser
+
+[W]
+keywords=browserlocation
+command=$BROWSERURL$
+comment=Get the current URL of the internal browser
+
+[W]
+keywords=browserrefresh
+command=$BROWSERREFRESH$
+comment=Refresh the current page in the internal browser
+
+[W]
+keywords=browsertoggle
+command=$BROWSERTOGGLE$
+comment=Show or hide the internal browser (consider setting a hotkey)
+
+[W]
+keywords=browserurl
+command=$P$$BROWSER$
+comment=Browse a url in internal browser, add url as parameter
+
+[W]
+keywords=browseurlnofocus
+command=$P$$BROWSERNOFOCUS$
+comment=Browse a url in internal browser, add url as parameter. Keep focus in input field
+
+[W]
+keywords=browserwin
+command=$BROWSERWIN$
+comment=Open current page in a window instead, using same browser session
+
+[W]
+keywords=browserwinexe
+command=$BROWSERWINEXE$
+comment=Open current page in a Executor window instead, using same browser session
+
+[W]
+keywords=connectexample
+command=https://executor.dk/connect_example$B$$BCONNECT$
+comment=Opens an example of page connected to the internal browser

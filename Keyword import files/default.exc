@@ -1,0 +1,413 @@
+[main]
+description=Executor default keywords
+
+[W]
+keywords=addremove
+command=control.exe
+comment=Add/remove programs
+param=appwiz.cpl
+
+[W]
+keywords=admin
+command=control.exe
+comment=Administrative tools
+param=admintools
+
+[W]
+keywords=alarm
+command=$ALARM$
+comment=A simple alarm [hour:min,stop]
+
+[W]
+keywords=apps
+command=$APPS$
+comment=List applications
+
+[W]
+keywords=browsertoggle
+command=$BROWSERTOGGLE$
+comment=Show or hide the internal browser (consider setting a hotkey)
+
+[W]
+keywords=calendar
+command=$DEF$https://calendar.google.com$DEF$https://calendar.google.com/calendar/r/search?q=$U$
+comment=Google Calendar
+
+[W]
+keywords=clipboard
+command=$CLIPBOARD$
+comment=View text from clipboard
+
+[W]
+keywords=control
+command=control.exe
+comment=Opens the control panel
+
+[W]
+keywords=define
+command=http://dictionary.reference.com/browse/$U$
+comment=Online dictionary
+
+[W]
+keywords=devices
+command=devmgmt.msc
+comment=Device manager
+
+[W]
+keywords=dice
+command=$ROLL$
+comment=Roll RPG like dice(s), examples: 6, 2d6, 3d6+4. No input rolls a 6 sided dice.
+param=$P$
+
+[W]
+keywords=display
+command=control.exe
+comment=Display settings
+param=desk.cpl ,3
+
+[W]
+keywords=email
+command=mailto:$P$
+comment=Send email
+
+[W]
+keywords=find
+command=search-ms:query=$p$
+comment=Windows instant search (if available)
+
+[W]
+keywords=firewall
+command=control.exe
+comment=Windows firewall config
+param=firewall.cpl
+
+[W]
+keywords=flipcoin
+command=$FLIPCOIN$
+comment=Flip a coin, heads or tails
+
+[W]
+keywords=g,google
+command=$DEF$https://google.com$DEF$https://google.com/search?q=$U$
+comment=Google Search
+
+[W]
+keywords=hood
+command=explorer.exe
+comment=My network places (Network Neighborhood)
+param=::{208D2C60-3AEA-1069-A2D7-08002B30309D}
+
+[W]
+keywords=ie
+command=IEXPLORE.EXE
+comment=Internet Explorer
+param=$P$
+
+[W]
+keywords=imdb
+command=http://www.imdb.com/find?s=all&q=$U$
+comment=IMDb search
+
+[W]
+keywords=ip
+command=$SHOWIP$
+comment=Get machine IP address (list if more)
+
+[W]
+keywords=ipconfig
+command=cmd.exe
+comment=IPconfig
+param=/K ipconfig $P$
+
+[W]
+keywords=launchtext
+command=$CE$
+comment=Bind to a hotkey, select some text/url/filepath and press hotkey to open
+
+[W]
+keywords=listgroups
+command=$GROUPS$
+comment=List keyword groups
+
+[W]
+keywords=media
+command=$MEDIA$
+comment=Default media player
+
+[W]
+keywords=mute
+command=$MUTE$
+comment=Mute and unmute sound
+
+[W]
+keywords=mycomp
+command=explorer.exe
+comment=Opens my computer
+param=::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+
+[W]
+keywords=mydoc
+command=explorer.exe
+comment=Opens my documents
+param=::{450D8FBA-AD25-11D0-98A8-0800361B1103}
+
+[W]
+keywords=netstat
+command=cmd.exe
+comment=Netstat
+param=/K netstat $P$
+
+[W]
+keywords=network
+command=control.exe
+comment=Network connections
+param=ncpa.cpl
+
+[W]
+keywords=next
+command=$NEXT$
+comment=Next media
+
+[W]
+keywords=notes
+command=$NOTES$
+comment=Notes
+param=$P$
+
+[W]
+keywords=p,prompt
+command=https://chatgpt.com/?q=$U$
+comment=Prompt AI
+
+[W]
+keywords=password
+command=$PASSWORD$
+comment=Generate password, default length 16 if no parameter, add "no" for no special chars
+param=$P$
+
+[W]
+keywords=pasteprev
+command=$PASTE2$
+comment=Paste second text in clipboard, assign it a hotkey
+
+[W]
+keywords=pause
+command=$PAUSE$
+comment=Pause/Play media
+
+[W]
+keywords=pin
+command=$PIN$
+comment=Pin an image to list [on/off/change]
+param=$P$
+
+[W]
+keywords=ping
+command=cmd.exe
+comment=Ping
+param=/K ping $P$
+
+[W]
+keywords=play
+command=$PLAY$
+comment=Play media
+
+[W]
+keywords=previous
+command=$PREV$
+comment=Previous media
+
+[W]
+keywords=printers
+command=ms-settings:printers
+comment=Printers and scanners
+
+[W]
+keywords=recent
+command=$RECENT$
+comment=List recent documents
+
+[W]
+keywords=recycle
+command=explorer.exe
+comment=Recycle bin
+param=::{645FF040-5081-101B-9F08-00AA002F954E}
+
+[W]
+keywords=refreshindex
+command=$REFRESHINDEX$
+comment=Will refresh the index now
+
+[W]
+keywords=reminder
+command=$REMINDER$
+comment=Set a reminder [text], use text "clear", "c" or "off" to remove reminder
+param=$P$
+
+[W]
+keywords=remote
+command=C:\WINDOWS\system32\mstsc.exe
+path=%HOMEDRIVE%%HOMEPATH%
+comment=Remote Desktop Connection
+
+[W]
+keywords=restore
+command=$WRESTORE$
+comment=Restore current window
+
+[W]
+keywords=screensaver
+command=$SCREENSAVER$
+comment=Start screensaver
+
+[W]
+keywords=search
+command=$SEARCH$
+comment=Open windows search
+
+[W]
+keywords=services
+command=services.msc
+comment=Windows services
+
+[W]
+keywords=settings
+command=ms-settings:
+comment=Windows settings (modern)
+
+[W]
+keywords=sound
+command=ms-settings:sound
+comment=WIndows sound settings
+
+[W]
+keywords=stop
+command=$STOP$
+comment=Stop media
+
+[W]
+keywords=stopwatch
+command=$STOPWATCH$
+comment=A simple stopwatch [start,stop]
+
+[W]
+keywords=system
+command=control.exe
+comment=System (same as properties on my computer)
+param=sysdm.cpl
+
+[W]
+keywords=tags
+command=$TAGS$
+comment=List tags
+
+[W]
+keywords=task
+command=taskmgr.exe
+comment=Task Manager
+
+[W]
+keywords=textclean
+command=$TEXTCLEAN$
+comment=Will strip formatting of current clipboard text
+
+[W]
+keywords=time
+command=$TIME$
+comment=Get time and date
+
+[W]
+keywords=timer
+command=$TIMER$
+comment=A simple timer [h:m:s,h:m,m,stop]
+
+[W]
+keywords=tracert
+command=cmd.exe
+comment=Trace route
+param=/K tracert $P$
+
+[W]
+keywords=translate
+command=$DEF$https://translate.google.com$DEF$https://translate.google.com/?sl=auto&tl=auto&text=$U$
+comment=Google Translate
+
+[W]
+keywords=updates
+command=ms-settings:windowsupdate
+comment=Windows updates
+
+[W]
+keywords=voldown
+command=$VOLUMEDOWN$
+comment=Turn volume down
+
+[W]
+keywords=volume
+command=ms-settings:apps-volume
+comment=Windows audio volume mixer
+
+[W]
+keywords=volup
+command=$VOLUMEUP$
+comment=Turn volume up
+
+[W]
+keywords=wiki
+command=https://wikipedia.org/wiki/$U$
+comment=Wikipedia search
+
+[W]
+keywords=y,youtube
+command=$DEF$https://youtube.com$DEF$https://www.youtube.com/results?search_query=$U$
+comment=YouTube Search
+
+[W]
+keywords=?emptyrecyclebin
+command=$EMPTYRECYCLEBIN$
+comment=Empty recycle bin
+
+[W]
+keywords=?hibernate
+command=$HIBERNATE$
+comment=Sets computer in hibernate mode
+
+[W]
+keywords=?lock
+command=$LOCK$
+comment=Lock computer or switch user
+
+[W]
+keywords=?logoff
+command=$LOGOFF$
+comment=Logoff current user
+
+[W]
+keywords=?monitor
+command=$MONITOR$
+comment=Turns off monitor
+
+[W]
+keywords=?restart
+command=$RESTART$
+comment=Restart windows
+
+[W]
+keywords=?saveclipboard
+command=$SAVECLIPBOARD$
+comment=Save clipboard to a file
+
+[W]
+keywords=?shutdown
+command=$SHUTDOWN$
+comment=Shutdown windows
+
+[W]
+keywords=?sleep
+command=$STANDBY$
+comment=Send computer to sleep mode
+
+[W]
+keywords=?standby
+command=$STANDBY$
+comment=Sets computer in standby mode

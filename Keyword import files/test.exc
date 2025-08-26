@@ -1,0 +1,17 @@
+[main]
+description=Test keywords for Executor resources
+
+[W]
+keywords=executor-community
+command=https://github.com/executordk/executor-community
+comment=Executor community 
+
+[W]
+keywords=executor-discussions
+command=https://github.com/executordk/executor-community/discussions
+comment=Executor community discussions
+
+[W]
+keywords=executor-website
+command=https://executor.dk
+comment=Executor website

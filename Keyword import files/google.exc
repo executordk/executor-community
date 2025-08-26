@@ -1,0 +1,93 @@
+[main]
+description=Google
+
+[W]
+keywords=calendar
+command=$DEF$https://calendar.google.com$DEF$https://calendar.google.com/calendar/r/search?q=$U$
+comment=Google Calendar
+
+[W]
+keywords=drive
+command=$DEF$https://drive.google.com/$DEF$https://drive.google.com/drive/search?q=$U$
+comment=Google Drive
+
+[W]
+keywords=g,google
+command=$DEF$https://google.com$DEF$https://google.com/search?q=$U$
+comment=Google Search
+
+[W]
+keywords=gdocs
+command=$DEF$https://docs.google.com$DEF$https://docs.google.com/document/?q=$U$
+comment=Google Docs
+
+[W]
+keywords=gemini
+command=https://gemini.google.com
+comment=Google Gemini
+
+[W]
+keywords=gfinance
+command=$DEF$https://www.google.com/finance$DEF$https://www.google.com/finance/quote/$U$
+comment=Google Finance
+
+[W]
+keywords=gmail
+command=$DEF$https://mail.google.com$DEF$https://mail.google.com/mail/#search/$U$
+comment=Gmail
+
+[W]
+keywords=gmaps
+command=$DEF$https://google.com/maps$DEF$https://www.google.com/maps/search/$U$
+comment=Google Maps
+
+[W]
+keywords=gmeet
+command=https://meet.google.com
+comment=Google Meet
+
+[W]
+keywords=gnews
+command=$DEF$https://news.google.com$DEF$https://news.google.com/search?q=$U$
+comment=Google News
+
+[W]
+keywords=gphotos
+command=$DEF$https://photos.google.com$DEF$https://photos.google.com/search/$U$
+comment=Google Photos
+
+[W]
+keywords=gsheets
+command=$DEF$https://docs.google.com/spreadsheets$DEF$https://docs.google.com/spreadsheets?q=$U$
+comment=Google Sheets
+
+[W]
+keywords=gslides
+command=$DEF$https://docs.google.com/presentation$DEF$https://docs.google.com/presentation?q=$U$
+comment=Google Slides
+
+[W]
+keywords=gtasks
+command=https://tasks.google.com
+comment=Google Tasks
+
+[W]
+keywords=keep
+command=$DEF$https://keep.google.com$DEF$https://keep.google.com/#search/text/$U$
+comment=Google Keep
+
+[W]
+keywords=translate
+command=$DEF$https://translate.google.com$DEF$https://translate.google.com/?sl=auto&tl=auto&text=$U$
+comment=Google Translate
+
+[W]
+keywords=y,youtube
+command=$DEF$https://youtube.com$DEF$https://www.youtube.com/results?search_query=$U$
+comment=YouTube Search
+
+[W]
+keywords=ymusic
+command=$DEF$https://music.youtube.com$DEF$https://music.youtube.com/search?q=$U$
+comment=YouTube Music
+

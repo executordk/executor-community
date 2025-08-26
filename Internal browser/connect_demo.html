@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- Crude one file example using vanilla JS and no external dependencies-->
+
+<head>
+  	<meta charset="UTF-8">
+	<title>Executor internal browser connect demo</title>
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-family : 'Segoe UI', Tahoma;
+			font-size: 90%;
+		}
+		a {
+			color: lime;
+		}
+		p {
+			margin : 7px 0px;
+		}
+		.debug {
+			font-size : 70%;
+			opacity : 0.76;
+		}
+	</style>
+</head>
+<html>
+<body>
+	<h3>Executor internal browser connect demo</h3>
+	<p>
+		<a href="https://google.com" target="_blank">test</a>
+		<a href="#" id="link_text">Set text in Executor</a> - <a href="#" id="link_text_focus">set text and focus in Executor</a><br/>
+		<a href="#" id="link_focus_input">Set focus input</a> - <a href="#" id="link_focus_select">input selectAll</a> - <a href="#" id="link_focus_end">input cursor at end</a> - <a href="#" id="link_clear">Input clear</a><br/>
+		<a href="#" id="link_focus_browser">Set focus browser</a> - <a href="#" id="link_browser_hide">browser hide</a> - <a href="#" id="link_executor_hide">Executor hide</a><br/>
+		<a href="#" id="link_open">Open url and dismiss Executor and browser</a> - <a href="#" id="link_run">Run time command</a>
+	</p>
+	<p>
+		<label>Realtime input (type something):</label>
+		<form onsubmit="alert('t')">
+		<input type="text" id="input_box" />
+		 <input type="submit" value="Send" />
+		 </form>
+		<div class="debug">Debug: input = <span id="input"></span>, command = <span id="command"></span>, parameter = <span id="parameter"></span></div>
+	</p>
+	<p>
+		<ul>
+			<li>Hint: In Executor you can right click in internal browser and inspect to debug.</li>
+			<li>Note: The browser launching keyword in Executor has to have $BCONNECT$ as part of the keyword command in
+				order to connect (for security reasons).</li>
+			<li>Note: Executor internal browser can also open local files besides online content.</li>
+			<li>Note: This only works if Executor is using Edge webview (default), and will not work with fallback IE webview.</li>
+		</ul>
+	</p>
+
+	<script src="executor-1.0.0.js"></script> <!-- load executor javascript functionality -->
+	<script>
+		// wait till Dom ready.
+		document.addEventListener('DOMContentLoaded', () => {
+
+			//executor._isReady = true; // <-- fake that executor is ready, for testing outside of executor etc..
+
+			// when Executor is ready do this
+			executor.onReady((exe) => {
+				exe.setColors(); // optional helper to set body color and background color to match executor
+
+				// setup click events on links
+				document.getElementById('link_text').addEventListener('click', () => {
+					exe.showMessage('Hello world','Internal browser connect demo');
+					event.preventDefault();
+				});
+
+				document.getElementById('link_text_focus').addEventListener('click', () => {
+					exe.showMessage('Hello world','Internal browser connect demo',true);
+					event.preventDefault();
+				});
+
+				document.getElementById('link_clear').addEventListener('click', () => {
+					exe.clearExecutorInput();
+					event.preventDefault();
+				});
+
+				document.getElementById('link_focus_input').addEventListener('click', () => {
+					exe.setFocusInput();
+					event.preventDefault();
+				});
+
+				document.getElementById('link_focus_select').addEventListener('click', () => {
+					exe.setFocusInput(true);
+					event.preventDefault();
+				});
+
+				document.getElementById('link_focus_end').addEventListener('click', () => {
+					exe.setFocusInput(false,true);
+					event.preventDefault();
+				});
+
+				document.getElementById('link_focus_browser').addEventListener('click', () => {
+					exe.setFocusBrowser();
+					event.preventDefault();
+				});
+
+				document.getElementById('link_browser_hide').addEventListener('click', () => {
+					exe.dismissBrowser();
+					event.preventDefault();
+				});
+
+				document.getElementById('link_executor_hide').addEventListener('click', () => {
+					exe.dismissExecutor();
+					event.preventDefault();
+				});
+
+				document.getElementById('link_open').addEventListener('click', () => {
+					exe.openUrl('https://google.com')
+					event.preventDefault();
+				});
+
+				document.getElementById('link_run').addEventListener('click', () => {
+					exe.runInput('time');
+					event.preventDefault();
+				});
+
+				// input box example code, setting listener
+				const inputBox = document.getElementById('input_box');
+				
+				// set initial input to match Executor..
+				inputBox.value = exe.getInput(true); // true to make sure we get start value
+				document.getElementById('input').textContent = exe.getInput(true); // true to make sure we get start value
+				document.getElementById('command').textContent = exe.getCommand(true); // true to make sure we get start value
+				document.getElementById('parameter').textContent = exe.getParameter(true); // true to make sure we get start value
+
+				// event on input key
+				inputBox.addEventListener('keyup', () => {
+					exe.setExecutorInput(inputBox.value,'Input box showcase');
+				});
+
+				// here we can confirm Executor got our call by comparing message id's 
+				exe.onResponse((resp) => { 
+					console.log(resp.id);
+				});
+
+				// fires when user enters something in Executor's text input, as long as browser is visible and connected with $BCONNECT$
+				exe.onInput((input, command, parameter) => {
+					console.log(input);
+					console.log(command);
+					console.log(parameter);
+
+					// set input box
+					inputBox.value = input; 
+					document.getElementById('input').textContent = exe.getInput();
+					document.getElementById('command').textContent = exe.getCommand();
+					document.getElementById('parameter').textContent = exe.getParameter();
+				});
+			});
+		});	// end DOM read
+	</script>
+</body>
+</html>

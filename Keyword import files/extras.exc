@@ -1,0 +1,48 @@
+[main]
+description=Additional keywords that are not part of the default keywords or were modified
+
+[W]
+keywords=pasteprev
+command=$PASTE2$
+comment=Paste second text in clipboard CTRL+ALT+V
+key=86
+keymod=6
+
+[W]
+keywords=pastethird
+command=$PASTE3$
+comment=Paste third text in clipboard SHIRT+CTRL+ALT+V
+key=86
+keymod=7
+
+[W]
+keywords=random
+command=$RANDOM$
+comment=Return a random number from 0 to X-1, parameter is X
+param=$P$
+
+[W]
+keywords=getmousepos
+command=$GETMOUSEPOS$
+comment=Get the x,y position of the mouse cursor
+
+[W]
+keywords=setmousepos
+command=$SETMOUSEPOS$
+comment=Set mouse screen position [x,y]
+
+[W]
+keywords=mouseclick
+command=$MOUSECLICK$
+comment=Do a left mouse click at [x,y] screen position
+
+[W]
+keywords=mouserightclick
+command=$MOUSERIGHTCLICK
+comment=Do a right mouse click at [x,y] screen position
+
+[W]
+keywords=getmouseposcolor
+command=$GETMOUSEPOSCOLOR$
+comment=Get RGB color code at mouse cursor position (no param) or [x,y] position
+

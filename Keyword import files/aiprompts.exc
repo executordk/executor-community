@@ -1,0 +1,53 @@
+﻿[main]
+description=Popular AI assistants
+
+[W]
+keywords=chatgpt
+command=https://chatgpt.com/?q=$U$
+comment=Prompt ChatGPT
+
+[W]
+keywords=claude
+command=https://claude.ai/new?q=$U$
+comment=Prompt Claude (requires login, have to press enter afterwards)
+
+[W]
+keywords=claudealt
+command=https://claude.ai$PSE1200$
+comment=Prompt Claude alternative (requires login)
+
+[W]
+keywords=copilot
+command=https://www.bing.com/search?showconv=1&sendquery=1&q=$U$
+comment=Prompt Copilot
+
+[W]
+keywords=deepseek
+command=https://chat.deepseek.com$PSE2000$
+comment=Prompt Deekseek (requires login)
+
+[W]
+keywords=gemini
+command=https://gemini.google.com$PSE1600$
+comment=Prompt Gemini
+
+[W]
+keywords=grok
+command=https://twitter.com/i/grok?text=$U$
+comment=Prompt Grok (requires login)
+
+[W]
+keywords=meta
+command=https://www.meta.ai$PSE3000$
+comment=Prompt Meta AI
+
+[W]
+keywords=mistral
+command=https://chat.mistral.ai/chat?q=$U$
+comment=Prompt Mistral
+
+[W]
+keywords=perplexity
+command=https://www.perplexity.ai/search?q=$U$
+comment=Prompt Perplexity
+
