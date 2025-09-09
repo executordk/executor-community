@@ -86,6 +86,17 @@ command=$WMAXWIDTH$
 comment=Maximize window width
 
 [W]
+keywords=winfo
+command=$WINFO$
+comment=Get information about the current active window
+
+[W]
+keywords=whandle
+command=$WHANDLE$
+comment=Open a window by it's handle [handle]
+param=$P$
+
+[W]
 keywords=xarrange
 command=$WEXECUTOR$
 comment=Arrange Executor size and/or position [width,height,(center)left,right,screen]
