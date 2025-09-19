@@ -21,7 +21,8 @@ comment=A simple alarm [hour:min,stop]
 [W]
 keywords=apps
 command=$APPS$
-comment=List applications
+comment=List applications, optional [search-text]
+param=$P$
 
 [W]
 keywords=browsertoggle
@@ -36,7 +37,8 @@ comment=Google Calendar
 [W]
 keywords=clipboard
 command=$CLIPBOARD$
-comment=View text from clipboard
+comment=View text from clipboard, optional [search-text]
+param=$P$
 
 [W]
 keywords=control
@@ -123,11 +125,6 @@ param=/K ipconfig $P$
 keywords=launchtext
 command=$CE$
 comment=Bind to a hotkey, select some text/url/filepath and press hotkey to open
-
-[W]
-keywords=listgroups
-command=$GROUPS$
-comment=List keyword groups
 
 [W]
 keywords=media
@@ -225,7 +222,8 @@ comment=Printers and scanners
 [W]
 keywords=recent
 command=$RECENT$
-comment=List recent documents
+comment=List recent documents, optional [search-text]
+param=$P$
 
 [W]
 keywords=recycle
@@ -299,7 +297,8 @@ param=sysdm.cpl
 [W]
 keywords=tags
 command=$TAGS$
-comment=List tags
+comment=List tags, optional [search-text]
+param=$P$
 
 [W]
 keywords=task
