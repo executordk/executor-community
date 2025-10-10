@@ -122,6 +122,11 @@ comment=IPconfig
 param=/K ipconfig $P$
 
 [W]
+keywords=kw
+command=$KWHISTORY$
+comment=Only list keywords from history, fuzzy search with parameter
+
+[W]
 keywords=launchtext
 command=$CE$
 comment=Bind to a hotkey, select some text/url/filepath and press hotkey to open

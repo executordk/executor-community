@@ -46,3 +46,7 @@ keywords=getmouseposcolor
 command=$GETMOUSEPOSCOLOR$
 comment=Get RGB color code at mouse cursor position (no param) or [x,y] position
 
+[W]
+keywords=history
+command=$HISTORY$
+comment=Only list history items, fuzzy search with parameter
