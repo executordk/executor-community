@@ -29,5 +29,8 @@ Simply browse the folders in this repository to find resources. Download the fil
 *   **Download Executor from Website:** [https://executor.dk/download](https://executor.dk/download)
 *   **Download Executor from GitHub:** [https://github.com/executordk/executor-community/releases](https://github.com/executordk/executor-community/releases)
 *   **YouTube video 📺 "often used features speedrun"** [https://www.youtube.com/watch?v=t-HlMb0mauM](https://www.youtube.com/watch?v=t-HlMb0mauM)
+*   **More videos 📺** [https://executor.dk/videos](https://executor.dk/videos)
+
+[![Executor: Often used features](http://img.youtube.com/vi/t-HlMb0mauM/0.jpg)](http://www.youtube.com/watch?v=t-HlMb0mauM "Executor: Often used features")
 
 Thanks for being part of the Executor community!
