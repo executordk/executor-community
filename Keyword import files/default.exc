@@ -111,6 +111,12 @@ command=http://www.imdb.com/find?s=all&q=$U$
 comment=IMDb search
 
 [W]
+keywords=imports
+command=https://executor.dk/imports$B$$BCONNECT$
+comment=List and optionally install from official imports (online)
+hist=0
+
+[W]
 keywords=ip
 command=$SHOWIP$
 comment=Get machine IP address (list if more)
