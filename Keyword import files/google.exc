@@ -57,6 +57,11 @@ command=$DEF$https://photos.google.com$DEF$https://photos.google.com/search/$U$
 comment=Google Photos
 
 [W]
+keywords=gscholar
+command=$DEF$https://scholar.google.com/$DEF$https://scholar.google.com/scholar?q=$U$
+comment=Google Scholar
+
+[W]
 keywords=gsheets
 command=$DEF$https://docs.google.com/spreadsheets$DEF$https://docs.google.com/spreadsheets?q=$U$
 comment=Google Sheets
