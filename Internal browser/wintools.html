@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<head>
+  	<meta charset="UTF-8">	
+	<title>Executor imports</title>
+	<style>
+		:root {
+  			--color: #95cfff;
+			--headline_color: #95cfff;
+			--bg_color: #333; 
+		}
+
+		body {
+			margin:0;
+			background-color: var(--bg_color);
+			color : var(--color);
+		}
+
+		.container {
+			font-family: monospace;
+			font-size: 110%;
+			padding: 0px 10px;
+			user-select: none;
+			min-height: 100vh;
+			position: relative;
+		}
+
+		table {
+			margin-bottom: 15px;
+		}
+
+		th, td {
+            padding: 0px 10px; 
+            text-align: left;
+			cursor: pointer;			
+        }		
+
+		p {
+			color: color-mix(in srgb, var(--headline_color), white 30%);
+		}
+		
+		a:focus:not(:focus-visible), button:focus:not(:focus-visible), 	[tabindex="0"]:focus:not(:focus-visible) {
+			outline: none; 
+		}
+
+		a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
+			outline: none; 
+			box-shadow: 0 0 0 1px;
+		}
+
+        tr:hover, tr:focus-visible {
+			text-shadow: 0 0 5px currentColor;
+			font-weight: bold;
+        }
+
+		@media (max-width: 400px) {
+			body {
+				font-size: 81%;
+			}
+		}
+
+		@media (max-width: 200px) {
+			body {
+				font-size: 61%;
+			}
+		}
+	</style>
+</head>
+<html>
+<body>
+	<div class="container">
+		<p>🛠️ System Information &amp; Diagnostics</p>
+		<table>
+			<tr><td>msinfo32</td><td>System Information overview</td></tr>
+			<tr><td>resmon</td><td>Resource Monitor</td></tr>
+			<tr><td>perfmon</td><td>Performance Monitor</td></tr>
+			<tr><td>dxdiag</td><td>DirectX Diagnostic Tool</td></tr>
+			<tr><td>eventvwr</td><td>Event Viewer</td></tr>
+			<tr><td>taskmgr</td><td>Task Manager</td></tr>
+			<tr><td>cmd</td><td>Command Prompt</td></tr>
+			<tr><td>powershell</td><td>PowerShell</td></tr>
+			<tr><td>verifier</td><td>Driver Verifier Manager</td></tr>
+			<tr><td>reliability</td><td>Reliability Monitor</td></tr>
+  			<tr><td>winver</td><td>Windows version info</td></tr>			
+		</table>
+
+		<p>⚙️ Settings &amp; Configuration</p>
+		<table>
+			<tr><td>msconfig</td><td>System Configuation</td></tr>
+			<tr><td>control</td><td>Control Panel</td></tr>
+			<tr><td>sysdm.cpl</td><td>System Properties</td></tr>
+			<tr><td>appwiz.cpl</td><td>Programs and Features</td></tr>
+			<tr><td>inetcpl.cpl</td><td>Internet Options</td></tr>
+			<tr><td>ncpa.cpl</td><td>Network Connections</td></tr>
+			<tr><td>desk.cpl</td><td>Display Settings</td></tr>
+			<tr><td>main.cpl</td><td>Mouse Settings</td></tr>
+			<tr><td>mmsys.cpl</td><td>Sound Settings</td></tr>
+			<tr><td>powercfg.cpl</td><td>Power Options</td></tr>
+			<tr><td>intl.cpl</td><td>Region and Language Settings</td></tr>
+			<tr><td>timedate.cpl</td><td>Date and Time Settings</td></tr>
+		</table>
+
+		<p>🔐 Security &amp; Admin Tools</p>
+		<table>
+			<tr><td>secpol.msc</td><td>Local Security Policy</td></tr>
+			<tr><td>gpedit.msc</td><td>Group Policy Editor</td></tr>
+			<tr><td>services.msc</td><td>Services Manager</td></tr>
+			<tr><td>compmgmt.msc</td><td>Computer Management</td></tr>
+			<tr><td>regedit</td><td>Registry Editor</td></tr>
+			<tr><td>lusrmgr.msc</td><td>Local Users and Groups</td></tr>
+			<tr><td>certmgr.msc</td><td>Certificate Manager</td></tr>
+			<tr><td>fsmgmt.msc</td><td>Shared Folders Manager</td></tr>
+			<tr><td>wmimgmt.msc</td><td>WMI Control</td></tr>
+			<tr><td>mrt</td><td>Malicious Software Removal</td></tr>
+		</table>
+
+		<p>📦 File &amp; Disk Utilities</p>
+		<table>
+			<tr><td>cleanmgr</td><td>Disk Cleanup</td></tr>
+			<tr><td>diskmgmt.msc</td><td>Disk Management</td></tr>
+			<tr><td>chkdsk</td><td>Check Disk</td></tr>			
+			<tr><td>explorer</td><td>File Explorer</td></tr>
+			<tr><td>notepad</td><td>Notepad</td></tr>
+			<tr><td>calc</td><td>Calculator</td></tr>
+			<tr><td>snippingtool</td><td>Snipping Tool</td></tr>
+			<tr><td>mspaint</td><td>Paint</td></tr>
+			<tr><td>write</td><td>WordPad</td></tr>
+			<tr><td>osk</td><td>On Screen Keywboard</td></tr>
+			<tr><td>charmap</td><td>Character Map</td></tr>
+			<tr><td>fonts</td><td>Fonts Folder</td></tr>
+			<tr><td>sdclt</td><td>Backup and Restore Window</td></tr>
+			<tr><td>control folders</td><td>Folder options</td></tr>
+		</table>
+
+		<p>🌐 Networking &amp; Internet</p>
+		<table>
+			<tr><td>ncpa.cpl</td><td>Network Connections</td></tr>
+			<tr><td>wf.msc</td><td>Windows Firewall Advanced</td></tr>
+			<tr><td>firewall.cpl</td><td>Basic Firewall Settings</td></tr>
+			<tr><td>inetcpl.cpl</td><td>Internet Options</td></tr>
+			<tr><td>ipconfig</td><td>IP Configuration</td></tr>
+			<tr><td>netplwiz</td><td>User Account Control Panel</td></tr>
+  			<tr><td>netstat</td><td>Network statistics</td></tr>
+			<tr><td>mstsc</td><td>Remote Desktop</td></tr>
+		</table>
+
+		<p>🧪 Developer &amp; Power Tools</p>
+		<table>
+			<tr><td>devmgmt.msc</td><td>Device Manager</td></tr>
+			<tr><td>printmanagement.msc</td><td>Print Management</td></tr>
+			<tr><td>compmgmt.msc</td><td>Computer Management</td></tr>
+			<tr><td>taskschd.msc</td><td>Task Scheduler</td></tr>
+			<tr><td>optionalfeatures</td><td>Optional features</td></tr>
+			<tr><td>sigverif</td><td>File Signature Veri. Tool</td></tr>
+			<tr><td>mdsched</td><td>Windows Memory Diagnostic</td></tr>
+			<tr><td>magnify</td><td>Magnifier :-)</td></tr>
+		</table>
+
+		<p>🛠️ System &amp; Device Settings (modern)</p>
+		<table>
+			<tr><td>:display</td><td>Display settings</td></tr>
+			<tr><td>:screenrotation</td><td>Screen rotation</td></tr>
+			<tr><td>:notifications</td><td>Notifications &amp; actions</td></tr>
+			<tr><td>:power</td><td>Power &amp; sleep settings</td></tr>
+			<tr><td>:batterysaver</td><td>Battery saver</td></tr>
+			<tr><td>:storage</td><td>Storage settings</td></tr>
+			<tr><td>:tabletmode</td><td>Tablet mode</td></tr>
+		</table>
+
+		<p>📡 Network &amp; Internet (modern)</p>
+		<table>
+			<tr><td>:network</td><td>Network status</td></tr>
+			<tr><td>:network-wifi</td><td>Wi-Fi settings</td></tr>
+			<tr><td>:network-ethernet</td><td>Ethernet settings</td></tr>
+			<tr><td>:network-mobilehotspot</td><td>Mobile hotspot</td></tr>
+			<tr><td>:network-vpn</td><td>VPN settings</td></tr>
+			<tr><td>:network-proxy</td><td>Proxy settings</td></tr>
+		</table>
+
+		<p>🔐 Privacy &amp; Security (modern)</p>
+		<table>
+			<tr><td>:privacy</td><td>Privacy overview</td></tr>
+			<tr><td>:privacy-location</td><td>Location settings</td></tr>
+			<tr><td>:privacy-camera</td><td>Camera access</td></tr>
+			<tr><td>:privacy-microphone</td><td>Microphone access</td></tr>
+			<tr><td>:privacy-notifications</td><td>Notification access</td></tr>
+			<tr><td>:windowsdefender</td><td>Windows Security</td></tr>
+		</table>
+
+		<p>🧑‍💻 Accounts &amp; Personalization (modern)</p>
+		<table>
+			<tr><td>:yourinfo</td><td>Your account info</td></tr>
+			<tr><td>:signinoptions</td><td>Sign-in options</td></tr>
+			<tr><td>:emailandaccounts</td><td>Email &amp; accounts</td></tr>
+			<tr><td>:lockscreen</td><td>Lock screen settings</td></tr>
+			<tr><td>:personalization</td><td>Personalization overview</td></tr>
+			<tr><td>:colors</td><td>Color settings</td></tr>
+			<tr><td>:themes</td><td>Theme settings</td></tr>
+			<tr><td>:fonts</td><td>Font settings</td></tr>
+		</table>
+
+		<p>🧩 Apps &amp; Features (modern)</p>
+		<table>
+			<tr><td>:appsfeatures</td><td>Apps &amp; features</td></tr>
+			<tr><td>:defaultapps</td><td>Default apps</td></tr>
+			<tr><td>:optionalfeatures</td><td>Optional Windows features</td></tr>
+		</table>
+
+		<p>🧭 Time, Language &amp; Region (modern)</p>
+		<table>
+			<tr><td>:dateandtime</td><td>Date &amp; time settings</td></tr>
+			<tr><td>:regionformatting</td><td>Region &amp; language</td></tr>
+			<tr><td>:language</td><td>Language settings</td></tr>
+			<tr><td>:speech</td><td>Speech settings</td></tr>
+		</table>
+
+		<p>🧰 Update &amp; Troubleshooting (modern)</p>
+		<table>
+			<tr><td>:windowsupdate</td><td>Windows Update</td></tr>
+			<tr><td>:troubleshoot</td><td>Troubleshoot settings</td></tr>
+			<tr><td>:recovery</td><td>Recovery options</td></tr>
+			<tr><td>:activation</td><td>Activation status</td></tr>
+			<tr><td>:backup</td><td>Backup settings</td></tr>
+		</table>
+
+		<p>📁 Shell Folder Shortcuts</p>
+		<table>
+			<tr><td>s:startup</td><td>Startup folder (current user)</td></tr>
+			<tr><td>s:common startup</td><td>Startup folder (all users)</td></tr>
+			<tr><td>s:sendto</td><td>SendTo folder</td></tr>
+			<tr><td>s:recent</td><td>Recent items</td></tr>
+			<tr><td>s:downloads</td><td>Downloads folder</td></tr>
+			<tr><td>s:documents</td><td>Documents folder</td></tr>
+			<tr><td>s:desktop</td><td>Desktop folder</td></tr>
+			<tr><td>s:programs</td><td>Start Menu programs</td></tr>
+			<tr><td>s:common programs</td><td>Start Menu programs (all users)</td></tr>
+			<tr><td>s:appdata</td><td>Roaming AppData folder</td></tr>
+			<tr><td>s:local appdata</td><td>Local AppData folder</td></tr>
+			<tr><td>s:profile</td><td>User profile folder</td></tr>
+			<tr><td>s:fonts</td><td>Fonts folder</td></tr>
+			<tr><td>s:networkplaces</td><td>Network Places</td></tr>
+			<tr><td>s:windows</td><td>Windows directory</td></tr>
+			<tr><td>%temp%</td><td>Temp folder</td></tr>
+			<tr><td>%programfiles%</td><td>ProgramsFiles</td></tr>			
+			<tr><td>%programfiles(x86)%</td><td>ProgramsFiles(x86)</td></tr>			
+			<tr><td>%programdata%</td><td>ProgramsData</td></tr>
+		</table>
+
+
+	</div>
+
+	<script src="executor-1.0.0.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+			executor.onReady(() => {
+				// set colors matching users Executor colors, lets try avoid hardcoding any colors and respect users colors
+				executor.setColors(); 
+				const root = document.documentElement;
+				root.style.setProperty('--color', executor.getColor());
+				root.style.setProperty('--headline_color', invertColor(executor.getColor()));
+				root.style.setProperty('--bg_color', executor.getBGColor());
+
+				// get all items to hook up
+				const items = document.querySelectorAll('tr');
+
+				// click/select event for each item
+            	items.forEach(row => {
+					row.addEventListener('click', function() {
+						let cmd = this.querySelector('td').textContent;
+						if (cmd.startsWith(":"))  // commands using ms-settings url scheme
+							cmd = 'ms-settings'+cmd;
+
+						if (cmd.startsWith("s:")) // commands using shell
+							cmd = 'shell:'+cmd.slice(2);
+
+						executor.runInput(cmd,false,true);
+					});
+	        	});
+
+				// apply keyboard navigation
+				items.forEach((item, index) => {
+				  item.tabIndex = index === 0 ? 0 : -1;
+				});
+
+				let firstNavKeyPress = true;
+				document.addEventListener('keydown', (e) => {
+					let currentFocusIndex = Array.from(items).findIndex(item => item.tabIndex === 0);
+					let newFocusIndex = currentFocusIndex;
+					
+					if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+						e.preventDefault(); 
+						if (firstNavKeyPress) {
+							newFocusIndex = 0;
+							firstNavKeyPress=false;
+						} else 
+    						newFocusIndex = (currentFocusIndex + 1) % items.length; 
+					} else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+						e.preventDefault(); 
+						if (firstNavKeyPress) {
+							newFocusIndex = items.length-1;
+							firstNavKeyPress=false;
+						} else
+    						newFocusIndex = (currentFocusIndex - 1 + items.length) % items.length;
+					} else if (e.key === 'PageDown' || e.key === 'PageUp') {
+						e.preventDefault(); 
+
+					    const tables = Array.from(document.querySelectorAll('table'));
+    					const activeElement = document.activeElement;
+						const currentTableIndex = tables.findIndex(table => table.contains(activeElement));
+
+						let targetIndex = e.key === 'PageDown' ? currentTableIndex + 1 	: currentTableIndex - 1;
+						if (firstNavKeyPress) {
+							targetIndex = e.key === 'PageDown' ? 0 : tables.length-1;
+							firstNavKeyPress=false;
+						}
+						targetIndex = targetIndex < 0 ? tables.length-1 : targetIndex;
+						targetIndex = targetIndex > tables.length-1 ? 0 : targetIndex;
+						const nextTable = tables[targetIndex];
+						if (nextTable) {
+							const nextItem = nextTable.querySelector('tr');
+							items[currentFocusIndex].setAttribute('tabindex', '-1');
+							nextItem.setAttribute('tabindex', '0');
+							nextItem.focus();							
+						}
+						return;
+					} else {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							if (firstNavKeyPress)
+		    					return;
+							items[newFocusIndex].click();
+						}
+						if (e.key === 'Escape') {
+	    					e.preventDefault();
+							executor.dismissBrowser();
+							return;
+						}
+						return;
+					}
+
+					items[currentFocusIndex].setAttribute('tabindex', '-1');
+					items[newFocusIndex].setAttribute('tabindex', '0');
+					items[newFocusIndex].focus();
+				});
+			});
+		});	
+
+		function invertColor(hex) {
+			const hexVal = hex.replace('#', '');
+			const r = 255 - parseInt(hexVal.substring(0, 2), 16);
+			const g = 255 - parseInt(hexVal.substring(2, 4), 16);
+			const b = 255 - parseInt(hexVal.substring(4, 6), 16);
+			return `rgb(${r}, ${g}, ${b})`;
+		}		
+	</script>
+</body>
+</html>
