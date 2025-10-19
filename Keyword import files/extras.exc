@@ -38,7 +38,7 @@ comment=Do a left mouse click at [x,y] screen position
 
 [W]
 keywords=mouserightclick
-command=$MOUSERIGHTCLICK
+command=$MOUSERIGHTCLICK$
 comment=Do a right mouse click at [x,y] screen position
 
 [W]
