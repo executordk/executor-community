@@ -368,6 +368,11 @@ command=https://wikipedia.org/wiki/$U$
 comment=Wikipedia search
 
 [W]
+keywords=wintools
+command=https://executor.dk/wintools$B$$BCONNECT$
+comment=List and open Windows tools etc. (online)
+
+[W]
 keywords=y,youtube
 command=$DEF$https://youtube.com$DEF$https://www.youtube.com/results?search_query=$U$
 comment=YouTube Search
