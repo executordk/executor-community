@@ -12,6 +12,16 @@ command=https://cnn.com$BROWSERNOFOCUS$
 comment=Example open CNN in internal browser, but keep focus in input field
 
 [W]
+keywords=browsenewsfull
+command=https://cnn.com$BNEWFULL$
+comment=Example open CNN in a full screen WebView window
+
+[W]
+keywords=browsenewswindow
+command=https://cnn.com$BNEWWIN$
+comment=Example open CNN in WebView window
+
+[W]
 keywords=browserback
 command=$BROWSERBACK$
 comment=Navigate back in internal browser
@@ -80,6 +90,11 @@ comment=Open current page in a window instead, using same browser session
 keywords=browserwinexe
 command=$BROWSERWINEXE$
 comment=Open current page in a Executor window instead, using same browser session
+
+[W]
+keywords=browserwinfull
+command=$BROWSERWINFULL$
+comment=Open current page fullscreen instead, using same browser session
 
 [W]
 keywords=connectexample
