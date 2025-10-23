@@ -79,8 +79,9 @@
 			<tr><td>cmd</td><td>Command Prompt</td></tr>
 			<tr><td>powershell</td><td>PowerShell</td></tr>
 			<tr><td>verifier</td><td>Driver Verifier Manager</td></tr>
-			<tr><td>reliability</td><td>Reliability Monitor</td></tr>
+			<tr><td>perfmon /rel</td><td>Reliability Monitor</td></tr>
   			<tr><td>winver</td><td>Windows version info</td></tr>			
+			<tr><td>cmd:systeminfo</td><td>System info (cmd)</td></tr>			
 		</table>
 
 		<p>⚙️ Settings &amp; Configuration</p>
@@ -111,13 +112,14 @@
 			<tr><td>fsmgmt.msc</td><td>Shared Folders Manager</td></tr>
 			<tr><td>wmimgmt.msc</td><td>WMI Control</td></tr>
 			<tr><td>mrt</td><td>Malicious Software Removal</td></tr>
+			<tr><td>cmd:gpupdate</td><td>Group policy update</td></tr>
+			<tr><td>cmd:gpresult /r</td><td>Group Policy Result</td></tr>			
 		</table>
 
 		<p>📦 File &amp; Disk Utilities</p>
 		<table>
 			<tr><td>cleanmgr</td><td>Disk Cleanup</td></tr>
 			<tr><td>diskmgmt.msc</td><td>Disk Management</td></tr>
-			<tr><td>chkdsk</td><td>Check Disk</td></tr>			
 			<tr><td>explorer</td><td>File Explorer</td></tr>
 			<tr><td>notepad</td><td>Notepad</td></tr>
 			<tr><td>calc</td><td>Calculator</td></tr>
@@ -129,6 +131,7 @@
 			<tr><td>fonts</td><td>Fonts Folder</td></tr>
 			<tr><td>sdclt</td><td>Backup and Restore Window</td></tr>
 			<tr><td>control folders</td><td>Folder options</td></tr>
+			<tr><td>cmd:chkdsk</td><td>Check Disk</td></tr>			
 		</table>
 
 		<p>🌐 Networking &amp; Internet</p>
@@ -137,10 +140,16 @@
 			<tr><td>wf.msc</td><td>Windows Firewall Advanced</td></tr>
 			<tr><td>firewall.cpl</td><td>Basic Firewall Settings</td></tr>
 			<tr><td>inetcpl.cpl</td><td>Internet Options</td></tr>
-			<tr><td>ipconfig</td><td>IP Configuration</td></tr>
+			<tr><td>cmd:ipconfig</td><td>IP Configuration</td></tr>
 			<tr><td>netplwiz</td><td>User Account Control Panel</td></tr>
-  			<tr><td>netstat</td><td>Network statistics</td></tr>
 			<tr><td>mstsc</td><td>Remote Desktop</td></tr>
+			<tr><td>cmd:netstat</td><td>Network statistics</td></tr>
+			<tr><td>cmd:netstat -abo</td><td>Network stats more info</td></tr>
+			<tr><td>cmd:route print</td><td>View local routing table</td></tr>			
+			<tr><td>cmd:getmac /V</td><td>MAC address list</td></tr>
+			<tr><td>cmd:net user</td><td>List user accounts on computer</td></tr>
+			<tr><td>cmd:net user /domain</td><td>List accounts on domain</td></tr>
+			<tr><td>cmd:hostname</td><td>Get hostname</td></tr>
 		</table>
 
 		<p>🧪 Developer &amp; Power Tools</p>
@@ -152,6 +161,8 @@
 			<tr><td>optionalfeatures</td><td>Optional features</td></tr>
 			<tr><td>sigverif</td><td>File Signature Veri. Tool</td></tr>
 			<tr><td>mdsched</td><td>Windows Memory Diagnostic</td></tr>
+			<tr><td>cmd:whoami</td><td>Get current user name</td></tr>
+			<tr><td>cmd:set</td><td>Show environment variables</td></tr>
 			<tr><td>magnify</td><td>Magnifier :-)</td></tr>
 		</table>
 
@@ -267,6 +278,10 @@
             	items.forEach(row => {
 					row.addEventListener('click', function() {
 						let cmd = this.querySelector('td').textContent;
+
+						if (cmd.startsWith("cmd:"))  // commands using ms-settings url scheme
+							cmd = 'cmd /k '+cmd.slice(4);
+						
 						if (cmd.startsWith(":"))  // commands using ms-settings url scheme
 							cmd = 'ms-settings'+cmd;
 
