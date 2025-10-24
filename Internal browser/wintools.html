@@ -280,7 +280,7 @@
 						let cmd = this.querySelector('td').textContent;
 
 						if (cmd.startsWith("cmd:"))  // commands using ms-settings url scheme
-							cmd = 'cmd /k '+cmd.slice(4);
+							cmd = 'cmd.exe /k '+cmd.slice(4);
 						
 						if (cmd.startsWith(":"))  // commands using ms-settings url scheme
 							cmd = 'ms-settings'+cmd;
