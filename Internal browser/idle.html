@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+  
+<!-- Crude one file example using vanilla JS and no external dependencies-->
+
+<head>
+  	<meta charset="UTF-8">	
+	<title>Executor</title>
+	<style>
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			color : #3CBAD9;
+			background-color: #171b1d;
+		}
+
+		.stars {
+			position: absolute;
+			display: block;
+			background-image: url("https://executor.dk/images/stars.jpg");
+			z-index: 1;
+			height: 200%;
+			width: 200%;
+			top: -50%;
+			left: -50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			animation-name: stars_spin;
+			animation-duration: 45000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		.logo {
+			position: absolute;
+			display: block;
+			background-image: url("https://executor.dk/images/demo.png");
+			z-index: 2;
+			height: 100%;
+			width: 100%;
+
+			background-position: center;
+			background-repeat: no-repeat;
+			animation-name: spin;
+			animation-duration: 5000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		.blur_logo {
+			position: absolute;
+			display: block;
+			/* The image used */
+			background-image: url("https://executor.dk/images/demo.png");
+			z-index: 1;
+			/* Full height */
+			height: 100%;
+			width: 100%;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			animation-name: blur_spin;
+			animation-duration: 5000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg) scale(1);
+			}
+
+			50% {
+				transform: rotate(180deg) scale(1.5);
+			}
+
+			100% {
+				transform: rotate(360deg) scale(1);
+			}
+		}
+
+		@keyframes stars_spin {
+			0% {
+				transform: rotate(0deg) scale(1);
+				opacity: 0.3;
+				filter: hue-rotate(-360deg);
+			}
+
+			50% {
+				transform: rotate(180deg) scale(1.5);
+				opacity: 0.8;
+				filter: hue-rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg) scale(1);
+				opacity: 0.3;
+				filter: hue-rotate(360deg);
+			}
+		}
+
+
+		@keyframes blur_spin {
+			0% {
+				transform: rotate(0deg) scale(1);
+				filter: blur(10px);
+			}
+
+			50% {
+				transform: rotate(180deg) scale(1.5);
+				filter: blur(60px);
+			}
+
+			100% {
+				transform: rotate(360deg) scale(1);
+				filter: blur(10px);
+			}
+		}
+
+		#text_box {
+			font-family: monospace;
+			font-size: 150%;
+			border-radius: 5px;
+			padding: 10px;
+			background-color: #0000007a;
+			user-select: none;
+		}
+
+		.container {
+			text-align: center;
+			vertical-align: middle;
+			position: relative;
+			z-index: 3;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 3;
+		}
+	</style>
+</head>
+<html>
+
+<body>
+	<div class="stars"></div>
+	<div class="logo"></div>
+	<div class="blur_logo"></div>
+	<div class=" container center">
+		<div id="text_box"></div>
+	</div>	
+
+	<script>
+		function showTime() {
+
+			const date = new Date();
+			const time = date.toLocaleTimeString([],{hour12 : false, hour: "2-digit", minute: "2-digit"});
+			const day = date.toLocaleDateString([], {weekday: "short", year: "numeric", month: "short",day: "numeric"});
+			const result = `${time} &bull; ${day}`; // Time first, then date
+			document.getElementById('text_box').innerHTML = result;
+		}
+
+		showTime();		
+		// Wait till Dom ready.
+		document.addEventListener('DOMContentLoaded', () => {
+			
+			// when Executor is ready do this
+			executor.onReady(() => {
+				executor.setColors(); // optional helper to set body color and background color to match executor
+				setInterval(function () {
+					showTime();
+				}, 1000);
+
+			});
+		});	// end DOM read
+	</script>
+</body>
+
+</html>

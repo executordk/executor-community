@@ -290,6 +290,11 @@ command=ms-settings:sound
 comment=WIndows sound settings
 
 [W]
+keywords=startpage
+command=$STARTPAGE$
+comment=Show start page
+
+[W]
 keywords=stop
 command=$STOP$
 comment=Stop media

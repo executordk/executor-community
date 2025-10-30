@@ -100,3 +100,8 @@ comment=Open current page fullscreen instead, using same browser session
 keywords=connectexample
 command=https://executor.dk/connect_example$B$$BCONNECT$
 comment=Opens an example of page connected to the internal browser
+
+[W]
+keywords=idle
+command=https://executor.dk/idle$BN$$BCONNECT$
+comment=Executor Idle screen
