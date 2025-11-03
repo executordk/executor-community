@@ -250,7 +250,7 @@ comment=Will refresh the index now
 [W]
 keywords=reminder
 command=$REMINDER$
-comment=Set a reminder [text], use text "clear", "c" or "off" to remove reminder
+comment=Set a reminder [text], use text "clear", "c", "off" or "stop" to remove reminder
 param=$P$
 
 [W]
