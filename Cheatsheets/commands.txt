@@ -1,0 +1,167 @@
+|| - Command separator
+$P$ - Parameter value
+$Px$ - Parameter at index x
+$U$ - Parameter value, URL-encoded
+$Ux$ - Parameter at index x, URL-encoded
+$B$ - Open in internal browser
+$BN$ - Open in internal browser, no focus
+$BCONNECT$ - Connect internal browser site with Executor
+$M$ - Minimize all windows
+$R$ - Restore all windows
+$DEF$..$DEF$ - Only execute this block if no parameters provided
+$C$ - Clipboard text
+$CU$ - Clipboard text, URL-encoded
+$CLR$ - Clear input field
+$PS$ - Type parameter text to active window
+$PSx$ - Type parameter text to active window, wait x ms
+$PSE$ - Type parameter text to active window with Enter
+$PSEx$ - Type parameter text to active window with Enter, wait x ms
+$W$ - Wait 1 second (running multiple commands)
+$Wx$ - Wait x seconds/milliseconds. $W2$ = 2sec, $W200ms$ = 200ms
+$ASYNC$ - Multiple commands should run asynchronously
+$NOHIDE$ - Don't hide Executor after doing multiple commands
+$CE$ - Copy and execute highlighted text
+$CX$ - Execute selected text; replace clipboard
+$CI$ - Copy text/path-of-item and insert in Executor input field
+$CC$ - Copy and insert clipboard text
+$CCU$ - Copy and insert clipboard text, URL-encoded
+$TEXTCLEAN$ - Strip formatting from clipboard
+$TEXTCLEANPASTE$ - Strip formatting from clipboard and paste
+$PASTE2$ - Paste clipboard history item 2
+$PASTEx$ - Paste clipboard history item x
+$COPY$ - Trigger copy
+$CUT$ - Trigger cut
+$PASTE$ - Trigger paste
+$SENDTEXT$ - Type text to active window
+$KEYS$ - Press a combination of keys. See docs (h=hold,p=press,r=release)
+$D$ - Executor's drive letter
+$H$ - Executor's full folder path
+{BR} - Line break
+$SOUND$..$SOUND$ - Play a sound file (insert file path)
+$BROWSER$ - Open in internal browser
+$BROWSERNOFOCUS$ - Open in internal browser, no focus
+$BROWSERFLUSHALL$ - Clear internal browser data
+$BROWSERTOGGLE$ - Show/Hide internal browser
+$BROWSEREND$ - End internal browser session
+$BROWSERCLEAR$ - Clear and hide current browser page
+$BROWSERURL$ - Get URL of internal browser
+$BROWSEREXPAND$ - Open current page in a full browser
+$BROWSERWIN$ - Open current page in a window instead
+$BROWSERWINEXE$ - Open current page in a Executor owned window instead
+$BROWSERWINFULL$ - Open current page in a Exec. fullscreen window instead
+$BNEWWIN$ - Open URL in a new Executor owned Window
+$BNEWFULL$ - Open URL in a fullscreen Executor owned Window
+$BROWSERBACK$ - Internal browser: navigate back
+$BROWSERFORWARD$ - Internal browser: navigate forward
+$BROWSERREFRESH$ - Internal browser: Refresh/reload current page
+$BSETFOCUS$ - Set focus to internal browser
+$BCLICK$..$BCLICK$ - Click int. browser webpage element (#id or .class)
+$BNORELOAD$ - Don't reload browser if active and same keyword calling
+$URLTOINPUT$ - Show text from URL in input
+$URLTOLIST$ - Show text from URL in list
+$URLTOLISTNOFOCUS$ - Show text from URL in list, no focus
+$GRABTOINPUT$ - Show text from cmd tool in input
+$GRABTOLIST$ - Show text from cmd tool in list
+$GRABTOLISTNOFOCUS$ - Show text from cmd tool in list, no focus
+$CLEARCLIPBOARD$ - Clear clipboard history
+$CLIPBOARDTONOTES$ - Copy current clipboard to Notes
+$ALLCLIPBOARDTONOTES$ - Copy all clipboard history to Notes
+$COPYTONOTES$ - Copy selected text to Notes
+$SETPOS$ - Set Executor window position [x,y]
+$WOPEN$ - Open active window
+$WCLOSE$ - Close active window
+$WMAXIMIZE$ - Maximize active window
+$WMINIMIZE$ - Minimize active window
+$WRESTORE$ - Restore active window
+$WRESIZE$ - Resize active window [width,height,(center)]
+$WMAXWIDTH$ - Maximize active window width
+$WMAXHEIGHT$ - Maximize active window height
+$WCENTER$ - Center active window
+$WADJUST$ - Adjust size/position of active window (see docs)
+$WARRANGE$ - Set size and/or position of active window (see docs)
+$WEXECUTOR$ - Set size and/or position of Executor window (see docs)
+$WLEFT$ - Align window to the left [optional-resize-percentage]
+$WRIGHT$ - Align window right [optional-resize-percentage]
+$WTOP$ - Align window to top [optional-resize-percentage]
+$WBOTTOM$ - Align window to bottom [optional-resize-percentage]
+$WINFO$ - Get info about the active window
+$WFINDACTIVE$..$WFINDACTIVE$ - Open window by it's title or class
+$WFINDCLOSE$..$WFINDCLOSE$ - Close window by it's title or class
+$WHANDLE$ - Open window by it's handle
+$NOTES$ - Open Notes
+$EDIT$ - Open expanded input edit
+$TIME$ - Display current time
+$PIN$ - Pin an image in list [on/off/change]
+$SHOWIP$ - Display IP address
+$REFRESHINDEX$ - Refresh index
+$FLUSHUWP$ - Flush UWP app index cache
+$BACKUP$ - Backup Executor data
+$LOCK$ - Lock computer
+$LOGOFF$ - Logoff computer
+$STANDBY$ - Windows standby/sleep
+$HIBERNATE$ - Windows hibernate
+$RESTART$ - Restart windows
+$SHUTDOWN$ - Shutdown windows
+$MONITOR$ - Turn off display(s)
+$QUIT$ - Quit Executor
+$EMPTYRECYCLEBIN$ - Empty recycle bin 
+$SCREENSAVER$ - Start screensaver
+$GETMOUSEPOS$ - Get the x,y position of the mouse cursor
+$SETMOUSEPOS$ - Set mouse screen position [x,y]
+$MOUSECLICK$ - Perform left mouse click at [x,y]
+$MOUSELEFTCLICK$ - Perform left mouse click at [x,y] screen position
+$MOUSERIGHTCLICK$ - Perform right mouse click at [x,y] screen position
+$GETMOUSEPOSCOLOR$ - Get RGB color code at mouse cursor
+$VOLUMEUP$ - Increase volume
+$VOLUMEDOWN$ - Decrease volume
+$PAUSE$ - Media: Pause
+$NEXT$ - Media: Next track
+$PREV$ - Media: Previous track
+$PLAY$ - Media: Play/Pause
+$STOP$ - Media: Stop
+$MEDIA$ - Open default media player
+$MUTE$ - Toggle mute
+$EJECT$ - Eject disc
+$STOPWATCH$ - Start/control stopwatch (see docs)
+$TIMER$ - Set/control timer (see docs)
+$ALARM$ - Set/control alarm (see docs)
+$REMINDER$ - Set/control reminder (see docs)
+$DATAFOLDER$ - Open Executor data folder
+$SEARCH$ - Open Windows Search
+$PASSWORD$ - Generate password
+$FLIPCOIN$ - Flip a coin
+$RANDOM$ - Generate random number (see docs)
+$ROLL$ - Roll dice (see docs)
+$RECENT$ - Open Recent Files list
+$GROUPS$ - (Legacy) open tags in list
+$TAGS$ - Open tags in list
+$CLIPBOARD$ - Open clipboard in list
+$APPS$ - Open apps in list
+$HISTORY$ - Only show history in list
+$KWHISTORY$ - Only show keywords from history in list
+$STARTPAGE$ - Open the start page (if defined)
+$SETDEFBROWSER$ - Set default browser (set path in parameter)
+$SETDEFEXPLORER$ - Set default file explorer (set path in parameter)
+$SETAUTOCENTER$ - Set auto-center setting [on,off,?,(empty=toggle)]
+$SETAUTOHIDE$ - Set auto-hide setting [on,off,?,(empty=toggle)]
+$SETLOCKWINDOW$ - Set lock window setting [on,off,?,(empty=toggle)]
+$SETSTAYONTOP$ -  Set stay on top setting [on,off,?,(empty=toggle)]
+%HOMEPATH% - Path of user's profile directory
+%HOMEDRIVE% - Drive letter of user's home directory
+%WINDIR% - Windows directory
+%APPDATA% - User's roaming application data folder
+%LOCALAPPDATA% - User's local application data folder
+%TEMP% - User's temporary files directory
+%USERPROFILE% - Current user's profile directory
+%USERNAME% - Current user's name
+%USERDOMAIN% - Domain or computer name
+%SystemRoot% - Windows directory
+%SystemDrive% - Drive letter of operating system
+%ProgramFiles% - Path to program files
+%ProgramFiles(x86)% - Path to program files(x86)
+%CommonProgramFiles% - Path to shared program files 
+%CommonProgramFiles(x86)% - Path to shared program files(x86)
+%PROGRAMDATA% - Path to application data shared by all users
+%ALLUSERSPROFILE% - Path to all users application data
+%COMSPEC% - Path of cmd.exe
+%PUBLIC% - Path to user's public folder
