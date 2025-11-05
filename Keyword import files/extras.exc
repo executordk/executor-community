@@ -54,23 +54,23 @@ comment=Only list history items, fuzzy search with parameter
 [W]
 keywords=autohide
 command=$SETAUTOHIDE$
-comment=Toggles auto-hide setting [on,off,?,(toggle)]
+comment=Toggles auto-hide setting [on,off,?,(empty=toggle)]
 param=$P$
 
 [W]
 keywords=autocenter
 command=$SETAUTOCENTER$
-comment=Toggles auto-center setting [on,off,?,(toggle)]
+comment=Toggles auto-center setting [on,off,?,(empty=toggle)]
 param=$P$
 
 [W]
 keywords=lockwindow
 command=$SETLOCKWINDOW$
-comment=Toggles lock window position and size setting [on,off,?,(toggle)]
+comment=Toggles lock window position and size setting [on,off,?,(empty=toggle)]
 param=$P$
 
 [W]
 keywords=stayontop
 command=$SETSTAYONTOP$
-comment=Toggles window stay on top setting [on,off,?,(toggle)]
+comment=Toggles window stay on top setting [on,off,?,(empty=toggle)]
 param=$P$
