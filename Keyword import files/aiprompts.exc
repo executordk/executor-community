@@ -3,7 +3,7 @@ description=Popular AI assistants
 
 [W]
 keywords=chatgpt
-command=https://chatgpt.com/?q=$U$
+command=$DEF$https://chatgpt.com$DEF$https://chatgpt.com$PSE2000$
 comment=Prompt ChatGPT
 
 [W]
@@ -13,12 +13,12 @@ comment=Prompt Claude (requires login, have to press enter afterwards)
 
 [W]
 keywords=claudealt
-command=https://claude.ai$PSE1200$
+command=https://claude.ai$PSE1500$
 comment=Prompt Claude alternative (requires login)
 
 [W]
 keywords=copilot
-command=https://www.bing.com/search?showconv=1&sendquery=1&q=$U$
+command=$DEF$https://copilot.microsoft.com$DEF$https://copilot.microsoft.com$PSE2000$
 comment=Prompt Copilot
 
 [W]
