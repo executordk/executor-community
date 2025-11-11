@@ -114,6 +114,7 @@ $MOUSERIGHTCLICK$ - Perform right mouse click at [x,y] screen position
 $GETMOUSEPOSCOLOR$ - Get RGB color code at mouse cursor
 $VOLUMEUP$ - Increase volume
 $VOLUMEDOWN$ - Decrease volume
+$VOLUME$ - Get, set or adjust volume [(+)(-)0-100,empty=get]
 $PAUSE$ - Media: Pause
 $NEXT$ - Media: Next track
 $PREV$ - Media: Previous track

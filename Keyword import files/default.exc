@@ -184,7 +184,7 @@ param=$P$
 
 [W]
 keywords=p,prompt
-command=https://chatgpt.com/?q=$U$
+command=$DEF$https://chatgpt.com$DEF$https://chatgpt.com$PSE2000$
 comment=Prompt AI
 
 [W]
@@ -283,6 +283,12 @@ comment=Windows services
 keywords=settings
 command=ms-settings:
 comment=Windows settings (modern)
+
+[W]
+keywords=setvolume
+command=$VOLUME$
+comment=Set, get or adjust volume [(+)(-)0-100,empty=get]. Example: +10
+param=$P$
 
 [W]
 keywords=sound
