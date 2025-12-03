@@ -2,6 +2,60 @@
 description=Executor default keywords
 
 [W]
+keywords=imports
+command=https://executor.dk/imports$B$$BCONNECT$
+comment=List and optionally install from official imports (online)
+hist=0
+
+[W]
+keywords=g,google
+command=$DEF$https://google.com$DEF$https://google.com/search?q=$U$
+comment=Google Search
+
+[W]
+keywords=y,youtube
+command=$DEF$https://youtube.com$DEF$https://www.youtube.com/results?search_query=$U$
+comment=YouTube Search
+
+[W]
+keywords=p,prompt
+command=$DEF$https://chatgpt.com$DEF$https://chatgpt.com$PSE2000$
+comment=Prompt AI
+
+[W]
+keywords=apps
+command=$APPS$
+comment=List applications, optional [search-text]
+param=$P$
+
+[W]
+keywords=wintools
+command=https://executor.dk/wintools$B$$BCONNECT$
+comment=List and open Windows tools etc. (online)
+
+[W]
+keywords=clipboard
+command=$CLIPBOARD$
+comment=View text from clipboard, optional [search-text]
+param=$P$
+
+[W]
+keywords=settings
+command=ms-settings:
+comment=Windows settings (modern)
+
+[W]
+keywords=refreshindex
+command=$REFRESHINDEX$
+comment=Will refresh the index now
+
+[W]
+keywords=notes
+command=$NOTES$
+comment=Notes
+param=$P$
+
+[W]
 keywords=addremove
 command=control.exe
 comment=Add/remove programs
@@ -19,12 +73,6 @@ command=$ALARM$
 comment=A simple alarm [hour:min,stop]
 
 [W]
-keywords=apps
-command=$APPS$
-comment=List applications, optional [search-text]
-param=$P$
-
-[W]
 keywords=browsertoggle
 command=$BROWSERTOGGLE$
 comment=Show or hide the internal browser (consider setting a hotkey)
@@ -33,12 +81,6 @@ comment=Show or hide the internal browser (consider setting a hotkey)
 keywords=calendar
 command=$DEF$https://calendar.google.com$DEF$https://calendar.google.com/calendar/r/search?q=$U$
 comment=Google Calendar
-
-[W]
-keywords=clipboard
-command=$CLIPBOARD$
-comment=View text from clipboard, optional [search-text]
-param=$P$
 
 [W]
 keywords=control
@@ -89,32 +131,15 @@ command=$FLIPCOIN$
 comment=Flip a coin, heads or tails
 
 [W]
-keywords=g,google
-command=$DEF$https://google.com$DEF$https://google.com/search?q=$U$
-comment=Google Search
-
-[W]
 keywords=hood
 command=explorer.exe
 comment=My network places (Network Neighborhood)
 param=::{208D2C60-3AEA-1069-A2D7-08002B30309D}
 
 [W]
-keywords=ie
-command=IEXPLORE.EXE
-comment=Internet Explorer
-param=$P$
-
-[W]
 keywords=imdb
 command=http://www.imdb.com/find?s=all&q=$U$
 comment=IMDb search
-
-[W]
-keywords=imports
-command=https://executor.dk/imports$B$$BCONNECT$
-comment=List and optionally install from official imports (online)
-hist=0
 
 [W]
 keywords=ip
@@ -177,17 +202,6 @@ command=$NEXT$
 comment=Next media
 
 [W]
-keywords=notes
-command=$NOTES$
-comment=Notes
-param=$P$
-
-[W]
-keywords=p,prompt
-command=$DEF$https://chatgpt.com$DEF$https://chatgpt.com$PSE2000$
-comment=Prompt AI
-
-[W]
 keywords=password
 command=$PASSWORD$
 comment=Generate password, default length 16 if no parameter, add "no" for no special chars
@@ -243,11 +257,6 @@ comment=Recycle bin
 param=::{645FF040-5081-101B-9F08-00AA002F954E}
 
 [W]
-keywords=refreshindex
-command=$REFRESHINDEX$
-comment=Will refresh the index now
-
-[W]
 keywords=reminder
 command=$REMINDER$
 comment=Set a reminder [text], use text "clear", "c", "off" or "stop" to remove reminder
@@ -278,11 +287,6 @@ comment=Open windows search
 keywords=services
 command=services.msc
 comment=Windows services
-
-[W]
-keywords=settings
-command=ms-settings:
-comment=Windows settings (modern)
 
 [W]
 keywords=setvolume
@@ -377,16 +381,6 @@ comment=Turn volume up
 keywords=wiki
 command=https://wikipedia.org/wiki/$U$
 comment=Wikipedia search
-
-[W]
-keywords=wintools
-command=https://executor.dk/wintools$B$$BCONNECT$
-comment=List and open Windows tools etc. (online)
-
-[W]
-keywords=y,youtube
-command=$DEF$https://youtube.com$DEF$https://www.youtube.com/results?search_query=$U$
-comment=YouTube Search
 
 [W]
 keywords=?emptyrecyclebin
