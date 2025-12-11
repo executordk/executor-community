@@ -74,3 +74,9 @@ keywords=stayontop
 command=$SETSTAYONTOP$
 comment=Toggles window stay on top setting [on,off,?,(empty=toggle)]
 param=$P$
+
+[W]
+keywords=holdtext
+command=$HOLDTEXT$
+comment=Toggles hold text [on,off,?,(empty=toggle)]
+param=$P$

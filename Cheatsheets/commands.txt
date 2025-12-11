@@ -146,7 +146,8 @@ $SETDEFEXPLORER$ - Set default file explorer (set path in parameter)
 $SETAUTOCENTER$ - Set auto-center setting [on,off,?,(empty=toggle)]
 $SETAUTOHIDE$ - Set auto-hide setting [on,off,?,(empty=toggle)]
 $SETLOCKWINDOW$ - Set lock window setting [on,off,?,(empty=toggle)]
-$SETSTAYONTOP$ -  Set stay on top setting [on,off,?,(empty=toggle)]
+$SETSTAYONTOP$ - Set stay on top setting [on,off,?,(empty=toggle)]
+$HOLDTEXT$ - Blocks text altering settings [on,off,?,(empty=toggle)]
 %HOMEPATH% - Path of user's profile directory
 %HOMEDRIVE% - Drive letter of user's home directory
 %WINDIR% - Windows directory
