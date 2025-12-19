@@ -80,3 +80,18 @@ keywords=holdtext
 command=$HOLDTEXT$
 comment=Toggles hold text [on,off,?,(empty=toggle)]
 param=$P$
+
+[W]
+keywords=gaming1
+command=$GAMINGTWICE$
+comment=Press Win twice for Executor [on,off,?,(empty=toggle)]
+
+[W]
+keywords=gaming2
+command=$GAMINGTWICESM$
+comment=Press Win twice for Start menu [on,off,?,(empty=toggle)]
+
+[W]
+keywords=gaming3
+command=$GAMINGWINOFF$
+comment=No Win press [on,off,?,(empty=toggle)]
