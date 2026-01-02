@@ -297,7 +297,7 @@ param=$P$
 [W]
 keywords=sound
 command=ms-settings:sound
-comment=WIndows sound settings
+comment=Windows sound settings
 
 [W]
 keywords=startpage
@@ -398,9 +398,9 @@ command=$LOCK$
 comment=Lock computer or switch user
 
 [W]
-keywords=?logoff
+keywords=?signout
 command=$LOGOFF$
-comment=Logoff current user
+comment=Sign out the current user
 
 [W]
 keywords=?monitor
