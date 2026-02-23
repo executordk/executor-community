@@ -143,14 +143,15 @@ $KWHISTORY$ - Only show keywords from history in list
 $STARTPAGE$ - Open the start page (if defined)
 $SETDEFBROWSER$ - Set default browser (set path in parameter)
 $SETDEFEXPLORER$ - Set default file explorer (set path in parameter)
+$SETOPENTEXTKEYWORD$ - Set open text keyword (set keyword name in parameter)
 $SETAUTOCENTER$ - Set auto-center setting [on,off,?,(empty=toggle)]
 $SETAUTOHIDE$ - Set auto-hide setting [on,off,?,(empty=toggle)]
 $SETLOCKWINDOW$ - Set lock window setting [on,off,?,(empty=toggle)]
 $SETSTAYONTOP$ - Set stay on top setting [on,off,?,(empty=toggle)]
 $HOLDTEXT$ - Blocks text altering settings [on,off,?,(empty=toggle)]
-$GAMINGTWICE$ - Press win twice for Executor [on,off,?,(empty=toggle)]
-$GAMINGTWICESM$ - Press win twice for Start Menu [on,off,?,(empty=toggle)]
-$GAMINGWINOFF$ - Pressing win does nothing [on,off,?,(empty=toggle)]
+$GAMINGTWICE$ - Press Win twice for Executor [on,off,?,(empty=toggle)]
+$GAMINGTWICESM$ - Press Win twice for Start Menu [on,off,?,(empty=toggle)]
+$GAMINGWINOFF$ - Pressing Win does nothing [on,off,?,(empty=toggle)]
 %HOMEPATH% - Path of user's profile directory
 %HOMEDRIVE% - Drive letter of user's home directory
 %WINDIR% - Windows directory
