@@ -32,7 +32,9 @@ $PASTEx$ - Paste clipboard history item x
 $COPY$ - Trigger copy
 $CUT$ - Trigger cut
 $PASTE$ - Trigger paste
-$SENDTEXT$ - Type text to active window
+$SENDTEXT$ - Type text to active window (keyboard writing)
+$SENDTEXT2$ - Type text to active window (paste)
+$SENDTEXT3$ - Type text to active window (paste+enter)
 $KEYS$ - Press a combination of keys. See docs (h=hold,p=press,r=release)
 $D$ - Executor's drive letter
 $H$ - Executor's full folder path

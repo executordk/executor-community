@@ -295,6 +295,12 @@ comment=Set, get or adjust volume [(+)(-)0-100,empty=get]. Example: +10
 param=$P$
 
 [W]
+keywords=skins
+command=https://executor.dk/skinsmenu$B$$BCONNECT$
+comment=Open skins menu (online)
+hist=0
+
+[W]
 keywords=sound
 command=ms-settings:sound
 comment=Windows sound settings
