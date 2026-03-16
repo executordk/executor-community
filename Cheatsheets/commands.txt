@@ -16,6 +16,10 @@ $PS$ - Type parameter text to active window
 $PSx$ - Type parameter text to active window, wait x ms
 $PSE$ - Type parameter text to active window with Enter
 $PSEx$ - Type parameter text to active window with Enter, wait x ms
+$PP$ - Paste parameter text to active window
+$PPx$ - Paste parameter text to active window, wait x ms
+$PPE$ - Paste parameter text to active window with Enter
+$PPEx$ - Paste parameter text to active window with Enter, wait x ms
 $W$ - Wait 1 second (running multiple commands)
 $Wx$ - Wait x seconds/milliseconds. $W2$ = 2sec, $W200ms$ = 200ms
 $ASYNC$ - Multiple commands should run asynchronously
