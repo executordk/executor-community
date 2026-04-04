@@ -22,6 +22,7 @@ $PPE$ - Paste parameter text to active window with Enter
 $PPEx$ - Paste parameter text to active window with Enter, wait x ms
 $W$ - Wait 1 second (running multiple commands)
 $Wx$ - Wait x seconds/milliseconds. $W2$ = 2sec, $W200ms$ = 200ms
+$GW$ - Get the current window for window management commands
 $ASYNC$ - Multiple commands should run asynchronously
 $NOHIDE$ - Don't hide Executor after doing multiple commands
 $CE$ - Copy and execute highlighted text
