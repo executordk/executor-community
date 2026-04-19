@@ -32,6 +32,8 @@ $CC$ - Copy and insert clipboard text
 $CCU$ - Copy and insert clipboard text, URL-encoded
 $TEXTCLEAN$ - Strip formatting from clipboard
 $TEXTCLEANPASTE$ - Strip formatting from clipboard and paste
+$TEXTREGEX$ - Run RegEx on clipboard text
+$TEXTREGEXPASTE$ - Run RegEx on clipboard text and paste
 $PASTE2$ - Paste clipboard history item 2
 $PASTEx$ - Paste clipboard history item x
 $COPY$ - Trigger copy
