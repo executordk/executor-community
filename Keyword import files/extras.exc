@@ -95,3 +95,121 @@ comment=Press Win twice for Start menu [on,off,?,(empty=toggle)]
 keywords=gaming3
 command=$GAMINGWINOFF$
 comment=No Win press [on,off,?,(empty=toggle)]
+
+[W]
+keywords=gamemode
+command=ms-settings:gaming-gamemode
+comment=Open gaming mode panel
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=151
+
+
+[W]
+keywords=?forceshutdown
+command=shutdown
+comment=Fast full cold shutdown windows, no hybrid sleep
+param=/s /f /t 0
+hist=0
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=27
+
+[W]
+keywords=?coldrestart
+command=shutdown.exe
+comment=Force restart windows cleanly with a full kernel reset
+param=/r /f /t 0
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=112
+
+[W]
+keywords=?coldrestartcontinue
+command=shutdown.exe
+comment=Full cold restart windows and relaunch registered apps
+param=/g /f /t 0
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=112
+
+[W]
+keywords=?restartexplorer
+command=cmd.exe
+open=3
+comment=Restart windows explorer process
+param=/c taskkill /f /im explorer.exe & start explorer.exe
+hist=0
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=147
+
+[W]
+keywords=?restartgraphics
+command=$KEYS$
+comment=Restart the graphics driver stack
+param=h17,h16,h91,p66,r17,r16,r91
+hist=0
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=93
+
+[W]
+keywords=?godmode
+command=shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
+comment=Open the master windows management directory
+hist=0
+key=53
+keymod=6
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=14
+
+[W]
+keywords=?blackout
+command=powershell.exe
+comment=Instantly disable all network adapters (ethernet + wifi)
+param=-Command "Disable-NetAdapter -Name * -Confirm:$false"
+runas=1
+hist=0
+
+[W]
+keywords=?restorenet
+command=powershell.exe
+comment=Instantly enable all network adapters back online
+param=-Command "Enable-NetAdapter -Name * -Confirm:$false"
+runas=1
+hist=0
+
+[W]
+keywords=flushdns
+command=cmd.exe
+open=3
+comment=Flush the local dns resolver cache
+param=/c ipconfig /flushdns
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=135
+
+[W]
+keywords=actioncenter
+command=$KEYS$
+comment=Open windows action center
+param=h91,p65,r91
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=21
+
+[W]
+keywords=connectdevice
+command=$KEYS$
+comment=Open the Connect quick actions
+param=h91,p75,r91
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=9
+
+[W]
+keywords=present
+command=$KEYS$
+comment=Choose a presentation display mode
+param=h91,p80,r91
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=89
+
+[W]
+keywords=about
+command=ms-settings:about
+comment=Display the System Properties
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=232
