@@ -213,3 +213,59 @@ command=ms-settings:about
 comment=Display the System Properties
 iconpath=%SystemRoot%\System32\SHELL32.dll
 iconidx=232
+
+[W]
+keywords=dark
+command=powershell.exe
+comment=Toggle Windows dark/light mode
+param=-Command "if((Get-ItemProperty HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize).AppsUseLightTheme -eq 1){Set-ItemProperty HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0}else{Set-ItemProperty HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 1}"
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=174
+
+[W]
+keywords=uptime
+command=cmd.exe
+comment=Show system uptime
+param=/K net statistics workstation | findstr "since"
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=265
+
+[W]
+keywords=diskspace
+command=powershell.exe
+comment=Show disk usage for all drives
+param=-NoExit -Command "Get-PSDrive -PSProvider FileSystem | ForEach-Object { $vol = Get-Volume -DriveLetter $_.Name -ErrorAction SilentlyContinue; [PSCustomObject]@{ Drive=$_.Name; Label=$vol.FileSystemLabel; 'Used (GB)'=[math]::Round($_.Used/1GB,1); 'Free (GB)'=[math]::Round($_.Free/1GB,1); 'Total (GB)'=[math]::Round(($_.Used+$_.Free)/1GB,1) } } | Format-Table -AutoSize"
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=80
+
+[W]
+keywords=env
+command=rundll32.exe
+comment=Open environment variables editor
+param=sysdm.cpl,EditEnvironmentVariables
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=12
+
+[W]
+keywords=wt
+command=wt.exe
+comment=Open Windows Terminal with CMD at a folder path
+param=--profile "Command Prompt" --startingDirectory "$P$"
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=34
+
+[W]
+keywords=wtps
+command=wt.exe
+comment=Open Windows Terminal with PowerShell at a folder path
+param=--profile "Windows PowerShell" --startingDirectory "$P$"
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=34
+
+[W]
+keywords=wtu
+command=wt.exe
+comment=Open Windows Terminal with Ubuntu at a folder path
+param=--profile "Ubuntu" --startingDirectory "$P$"
+iconpath=%SystemRoot%\System32\SHELL32.dll
+iconidx=34
