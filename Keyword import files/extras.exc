@@ -250,7 +250,7 @@ iconidx=12
 keywords=wt
 command=wt.exe
 comment=Open Windows Terminal with CMD at a folder path
-param=--profile "Command Prompt" --startingDirectory "$P$"
+param=--profile "Command Prompt" --startingDirectory "$P$
 iconpath=%SystemRoot%\System32\SHELL32.dll
 iconidx=34
 
@@ -258,7 +258,7 @@ iconidx=34
 keywords=wtps
 command=wt.exe
 comment=Open Windows Terminal with PowerShell at a folder path
-param=--profile "Windows PowerShell" --startingDirectory "$P$"
+param=--profile "Windows PowerShell" --startingDirectory "$P$
 iconpath=%SystemRoot%\System32\SHELL32.dll
 iconidx=34
 
@@ -266,6 +266,6 @@ iconidx=34
 keywords=wtu
 command=wt.exe
 comment=Open Windows Terminal with Ubuntu at a folder path
-param=--profile "Ubuntu" --startingDirectory "$P$"
+param=--profile "Ubuntu" --startingDirectory "$P$
 iconpath=%SystemRoot%\System32\SHELL32.dll
 iconidx=34
