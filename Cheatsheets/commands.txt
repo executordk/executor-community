@@ -25,6 +25,7 @@ $Wx$ - Wait x seconds/milliseconds. $W2$ = 2sec, $W200ms$ = 200ms
 $GW$ - Get the current window for window management commands
 $ASYNC$ - Multiple commands should run asynchronously
 $NOHIDE$ - Don't hide Executor after doing multiple commands
+$SKIP$ - Skip this command when using multiple commands
 $CE$ - Copy and execute highlighted text
 $CX$ - Execute selected text; replace clipboard
 $CI$ - Copy text/path-of-item and insert in Executor input field
