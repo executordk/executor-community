@@ -78,6 +78,12 @@ command=$BROWSERTOGGLE$
 comment=Show or hide the internal browser (consider setting a hotkey)
 
 [W]
+keywords=incognito
+command=$INCOGNITO$
+comment=Incognito mode [on,off,?,(empty=toggle),[(,)config]]
+param=$P$
+
+[W]
 keywords=calendar
 command=$DEF$https://calendar.google.com$DEF$https://calendar.google.com/calendar/r/search?q=$U$
 comment=Google Calendar

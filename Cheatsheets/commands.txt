@@ -151,6 +151,7 @@ $APPS$ - Open apps in list
 $HISTORY$ - Only show history in list
 $KWHISTORY$ - Only show keywords from history in list
 $STARTPAGE$ - Open the start page (if defined)
+$INCOGNITO$ - Incognito mode [on,off,?,(empty=toggle),[(,)config]]
 $SETDEFBROWSER$ - Set default browser (set path in parameter)
 $SETDEFEXPLORER$ - Set default file explorer (set path in parameter)
 $SETOPENTEXTKEYWORD$ - Set open text keyword (set keyword name in parameter)
