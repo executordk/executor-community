@@ -97,6 +97,13 @@ command=$GAMINGWINOFF$
 comment=No Win press [on,off,?,(empty=toggle)]
 
 [W]
+keywords=showpinned
+command=$SHOWPINNED$
+comment=Toggle pinned items [on,off,?,(empty=toggle)]
+param=$P$
+hist=0
+
+[W]
 keywords=gamemode
 command=ms-settings:gaming-gamemode
 comment=Open gaming mode panel
