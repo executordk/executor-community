@@ -44,6 +44,8 @@ $SENDTEXT$ - Type text to active window (keyboard writing)
 $SENDTEXT2$ - Type text to active window (paste)
 $SENDTEXT3$ - Type text to active window (paste+enter)
 $KEYS$ - Press a combination of keys. See docs (h=hold,p=press,r=release)
+$SENDKEYS$ - Send keys to active window (see $KEYS$)
+$BACK$ - Dismiss Executor and return to active window
 $D$ - Executor's drive letter
 $H$ - Executor's full folder path
 {BR} - Line break

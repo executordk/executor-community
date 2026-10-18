@@ -22,6 +22,13 @@ comment=Return a random number from 0 to X-1, parameter is X
 param=$P$
 
 [W]
+keywords=emoji
+command=$SENDKEYS$
+comment=Open Windows emojis
+param={PAUSE 10}h91,p190,r91
+hist=0
+
+[W]
 keywords=getmousepos
 command=$GETMOUSEPOS$
 comment=Get the x,y position of the mouse cursor

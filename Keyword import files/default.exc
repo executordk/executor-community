@@ -70,7 +70,9 @@ param=admintools
 [W]
 keywords=alarm
 command=$ALARM$
-comment=A simple alarm [hour:min,stop]
+comment=A simple alarm [hour:min,stop (message)] 
+param=$P$
+hist=0
 
 [W]
 keywords=browsertoggle
@@ -325,6 +327,8 @@ comment=Stop media
 keywords=stopwatch
 command=$STOPWATCH$
 comment=A simple stopwatch [start,stop]
+param=$P$
+hist=0
 
 [W]
 keywords=system
@@ -356,7 +360,9 @@ comment=Get time and date
 [W]
 keywords=timer
 command=$TIMER$
-comment=A simple timer [h:m:s,h:m,m,stop]
+comment=A simple timer [h:m:s,h:m,m,stop (message)]
+param=$P$
+hist=0
 
 [W]
 keywords=tracert
