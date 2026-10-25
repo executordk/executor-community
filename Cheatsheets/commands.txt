@@ -155,6 +155,7 @@ $KWHISTORY$ - Only show keywords from history in list
 $STARTPAGE$ - Open the start page (if defined)
 $INCOGNITO$ - Incognito mode [on,off,?,(empty=toggle),[(,)config]]
 $SHOWPINNED$ - Toggle pinned items [on,off,?,(empty=toggle)]
+$LAUNCHTAG$ - Launch all keywords with a specific tag [tag]
 $SETDEFBROWSER$ - Set default browser (set path in parameter)
 $SETDEFEXPLORER$ - Set default file explorer (set path in parameter)
 $SETOPENTEXTKEYWORD$ - Set open text keyword (set keyword name in parameter)

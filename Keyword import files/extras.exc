@@ -59,6 +59,12 @@ command=$HISTORY$
 comment=Only list history items, fuzzy search with parameter
 
 [W]
+keywords=lt
+command=$DEF$$TAGS$$DEF$$LAUNCHTAG$
+comment=Launch keywords with tag [tag]
+param=$P$
+
+[W]
 keywords=autohide
 command=$SETAUTOHIDE$
 comment=Toggles auto-hide setting [on,off,?,(empty=toggle)]
