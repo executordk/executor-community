@@ -343,6 +343,12 @@ comment=List tags, optional [search-text]
 param=$P$
 
 [W]
+keywords=nl
+command=$NOTELIST$
+comment=List Notes
+hist=0
+
+[W]
 keywords=task
 command=taskmgr.exe
 comment=Task Manager

@@ -101,6 +101,9 @@ $WFINDACTIVE$..$WFINDACTIVE$ - Open window by it's title or class
 $WFINDCLOSE$..$WFINDCLOSE$ - Close window by it's title or class
 $WHANDLE$ - Open window by it's handle
 $NOTES$ - Open Notes
+$NOTEOPEN$ - Open a specfic note [note-name]
+$N name$ - Inject the text of a specific note
+$NU name$ - Inject and URL encode the text of a specific note
 $EDIT$ - Open expanded input edit
 $TIME$ - Display current time
 $PIN$ - Pin an image in list [on/off/change]
@@ -148,6 +151,7 @@ $ROLL$ - Roll dice (see docs)
 $RECENT$ - Open Recent Files list
 $GROUPS$ - (Legacy) open tags in list
 $TAGS$ - Open tags in list
+$NOTELIST$ - Show Notes in list
 $CLIPBOARD$ - Open clipboard in list
 $APPS$ - Open apps in list
 $HISTORY$ - Only show history in list
