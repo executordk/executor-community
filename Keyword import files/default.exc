@@ -349,6 +349,12 @@ comment=List Notes
 hist=0
 
 [W]
+keywords=ns
+command=$NOTESEARCH$
+comment=Search all notes for text [text]
+hist=0
+
+[W]
 keywords=task
 command=taskmgr.exe
 comment=Task Manager

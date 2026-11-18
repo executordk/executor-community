@@ -152,6 +152,7 @@ $RECENT$ - Open Recent Files list
 $GROUPS$ - (Legacy) open tags in list
 $TAGS$ - Open tags in list
 $NOTELIST$ - Show Notes in list
+$NOTESEARCH$ - Search notes for text [text]
 $CLIPBOARD$ - Open clipboard in list
 $APPS$ - Open apps in list
 $HISTORY$ - Only show history in list
