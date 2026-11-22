@@ -267,6 +267,11 @@ iconpath=%SystemRoot%\System32\SHELL32.dll
 iconidx=12
 
 [W]
+keywords=plugins
+command=$PLUGINS$
+comment=List and manage plugins
+
+[W]
 keywords=wt
 command=wt.exe
 comment=Open Windows Terminal with CMD at a folder path

@@ -104,6 +104,7 @@ $NOTES$ - Open Notes
 $NOTEOPEN$ - Open a specfic note [note-name]
 $N name$ - Inject the text of a specific note
 $NU name$ - Inject and URL encode the text of a specific note
+$PLUGIN id$ - Run a plugin [plugin-id]
 $EDIT$ - Open expanded input edit
 $TIME$ - Display current time
 $PIN$ - Pin an image in list [on/off/change]
@@ -157,6 +158,7 @@ $CLIPBOARD$ - Open clipboard in list
 $APPS$ - Open apps in list
 $HISTORY$ - Only show history in list
 $KWHISTORY$ - Only show keywords from history in list
+$PLUGINS$ - List and manage plugins
 $STARTPAGE$ - Open the start page (if defined)
 $INCOGNITO$ - Incognito mode [on,off,?,(empty=toggle),[(,)config]]
 $SHOWPINNED$ - Toggle pinned items [on,off,?,(empty=toggle)]

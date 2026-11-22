@@ -9,6 +9,7 @@ This repository is the central place for the Executor community for resources li
 *   **Graphical assets:** Icons and images etc. 🖼
 *   **Cheatsheets:** Quick references and tips to get the most out of Executor. ⭐
 *   **Skins:** Customize the look and feel of Executor. 🎨
+*   **Plugins:** How to build plugins (with AI or not) and plugin examples. 🔌
 *   **Other:** Other assets etc. 📃
 
 ## Getting Resources

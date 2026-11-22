@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+  Page for the "Color preview" example plugin (colorpreview.py), opened in
+  Executor's internal browser with the "executor-browser" action.
+
+  With executor-1.0.0.js in the plugins folder, the page is connected to
+  Executor (Executor.js): it uses Executor's colors and follows what you type.
+  Type another color (#00ff00, 255,0,0, teal, or "color #00ff00") and the
+  preview updates. Only level 1 Executor.js calls are used, so there are no
+  permission prompts.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color preview</title>
+<script src="executor-1.0.0.js"></script>
+<style>
+  :root { --fg: #222; --bg: #fff; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font: 14px/1.4 "Segoe UI", system-ui, sans-serif;
+    color: var(--fg); background: var(--bg);
+    display: flex; gap: 20px; padding: 16px; box-sizing: border-box;
+  }
+  #swatch {
+    flex: 0 0 40%; min-height: 120px; border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, .35);
+  }
+  #info { flex: 1; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .row { display: flex; align-items: center; gap: 8px; }
+  .value { font: 16px Consolas, monospace; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  button {
+    font: inherit; color: inherit; background: transparent; cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, .5); border-radius: 4px; padding: 2px 10px;
+  }
+  button:hover { border-color: currentColor; }
+  #hint { opacity: .6; margin-top: auto; }
+</style>
+</head>
+<body>
+  <div id="swatch"></div>
+  <div id="info">
+    <div class="row"><span class="value" id="hex"></span><button data-copy="hex">Copy</button></div>
+    <div class="row"><span class="value" id="rgb"></span><button data-copy="rgb">Copy</button></div>
+    <div class="row"><span class="value" id="hsl"></span><button data-copy="hsl">Copy</button></div>
+    <div id="hint">Type another color in Executor to preview it.</div>
+  </div>
+
+<script>
+  const NAMED = { black:"000000", white:"ffffff", red:"ff0000", green:"008000", blue:"0000ff",
+    yellow:"ffff00", orange:"ffa500", purple:"800080", pink:"ffc0cb", gray:"808080", grey:"808080",
+    teal:"008080", navy:"000080", gold:"ffd700", silver:"c0c0c0" };
+
+  // same formats as colorpreview.py
+  function parseColor(text) {
+    let t = (text || "").trim().toLowerCase();
+    if (NAMED[t]) t = NAMED[t];
+    let m = t.match(/^#?([0-9a-f]{3}|[0-9a-f]{6})$/);
+    if (m) {
+      let h = m[1].length === 3 ? [...m[1]].map(c => c + c).join("") : m[1];
+      return [0, 2, 4].map(i => parseInt(h.substr(i, 2), 16));
+    }
+    m = t.match(/^(?:rgb\()?\s*(\d{1,3})[\s,]+(\d{1,3})[\s,]+(\d{1,3})\s*\)?$/);
+    if (m && m.slice(1).every(v => +v <= 255)) return m.slice(1).map(Number);
+    return null;
+  }
+
+  function toHsl([r, g, b]) {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b), l = (max + min) / 2;
+    let h = 0, s = 0;
+    if (max !== min) {
+      const d = max - min;
+      s = l > .5 ? d / (2 - max - min) : d / (max + min);
+      h = max === r ? (g - b) / d + (g < b ? 6 : 0) : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+      h /= 6;
+    }
+    return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
+  }
+
+  function show(rgb) {
+    const hex = "#" + rgb.map(v => v.toString(16).padStart(2, "0")).join("").toUpperCase();
+    document.getElementById("swatch").style.background = hex;
+    document.getElementById("hex").textContent = hex;
+    document.getElementById("rgb").textContent = `rgb(${rgb.join(", ")})`;
+    document.getElementById("hsl").textContent = toHsl(rgb);
+    document.title = hex;
+  }
+
+  // the color from the plugin: colorpreview.html?c=ff8800
+  show(parseColor(new URLSearchParams(location.search).get("c")) || [128, 128, 128]);
+
+  // copy: the clipboard API, else put the value in Executor's input (level 1)
+  document.querySelectorAll("button[data-copy]").forEach(btn => {
+    btn.onclick = () => {
+      const value = document.getElementById(btn.dataset.copy).textContent;
+      const fallback = () => window.executor && executor.setExecutorInput(value, "Color value", true);
+      if (navigator.clipboard) navigator.clipboard.writeText(value).then(() => {
+        btn.textContent = "Copied"; setTimeout(() => btn.textContent = "Copy", 1200);
+      }, fallback);
+      else fallback();
+    };
+  });
+
+  // connected to Executor (only when executor-1.0.0.js is there)
+  if (window.executor) {
+    executor.onReady(exe => {
+      exe.setColors(); // the page follows Executor's theme
+      document.documentElement.style.setProperty("--fg", exe.getColor());
+      document.documentElement.style.setProperty("--bg", exe.getBGColor());
+    });
+    // "color #00ff00", "#00ff00", "255,0,0", "teal": preview whatever parses
+    executor.onInput((input, command, parameter) => {
+      const rgb = parseColor(input) || parseColor(parameter);
+      if (rgb) show(rgb);
+    });
+  } else {
+    document.getElementById("hint").textContent =
+      "Put executor-1.0.0.js in the plugins folder to follow what you type in Executor.";
+  }
+</script>
+</body>
+</html>
