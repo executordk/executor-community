@@ -140,7 +140,7 @@ Executor actions:
 | `executor-open-note` | `note` | Opens a note by name |
 | `executor-browser` | `url`, optional `focus` (default `true`) and `connect` | Opens the page in Executor's internal browser, like a keyword with `$B$` (or `$BN$` with `"focus": false`). `"connect": true` connects the page to Executor.js, like `$BCONNECT$` |
 
-`executor-browser` can open a web address, or a page that comes with the plugin: an `.html` file relative to the plugin's folder (or a full path), optionally with a query string, e.g. `{"id": "executor-browser", "url": "fav.html?folder=C:\\Projects", "connect": true}`. A connected page can use [Executor.js](https://www.executor.dk/internalbrowser) to follow what's typed in Executor, set the input, run commands and so on, within the permissions the user has given. `executor.getInput(true)` returns what was typed when the page opened (e.g. `fav proj`), and `executor.getQuery()` returns the plugin's search (`proj`). That way a plugin can have its own UI inside Executor.
+`executor-browser` can open a web address, or a page that comes with the plugin: an `.html` file relative to the plugin's folder (or a full path), optionally with a query string, e.g. `{"id": "executor-browser", "url": "colorpreview.html?c=FF8800", "connect": true}`. See [Plugins with their own page](#plugins-with-their-own-page).
 
 Any other `id` is a **custom action**. Executor calls the script with the `action` method and passes the action's `id` and `data`:
 
@@ -153,6 +153,18 @@ A script with nothing more to do returns `{"jsonrpc": "2.0", "result": {}, "id":
 ```json
 {"jsonrpc": "2.0", "result": {"actions": [{"id": "notify", "message": "Process ended"}]}, "id": "2"}
 ```
+
+## Plugins with their own page
+
+A plugin and Executor's internal browser together can do more than a list of results: the plugin finds what you're after, and a page it comes with shows it, with buttons, previews or anything else HTML can do, inside Executor.
+
+- The plugin opens its page with an `executor-browser` action and `"connect": true`.
+- The page includes `executor-1.0.0.js` and uses Executor.js to work with Executor: follow what's typed, use Executor's colors, set the input, run commands and more, within the permissions the user has given. `executor.getInput(true)` returns what was typed when the page opened (e.g. `fav proj`), and `executor.getQuery()` returns the plugin's search (`proj`).
+- With `"focus": false` the typing stays in Executor's input, so the page can update as you type.
+
+The [internal browser integration guide](https://executor.dk/internalbrowser) documents Executor.js and the permission levels. The **Color preview** example (`colorpreview.py` and `colorpreview.html`) shows the whole thing: `color teal` opens a preview page that follows the colors you type next.
+
+To have an AI build one, paste this page and the integration guide into the chat, then describe the plugin and its page.
 
 ## Environment variables
 
@@ -192,6 +204,10 @@ Everything Executor stores about plugins is in the plugins folder, so deleting t
 Paste this page into the chat, then ask, for example:
 
 > Write an Executor script plugin in Python, using only the standard library. Trigger keyword `tz`. It should show the current time in the cities I type (e.g. `tz tokyo london`). Enter copies the time, and a second action pastes it into the previous window.
+
+For a plugin with its own page in the internal browser, also give the AI the [internal browser integration guide](https://executor.dk/internalbrowser) (paste it, or ask the AI to read that address), for example:
+
+> Write an Executor plugin with a connected page for the internal browser (see the integration guide at https://executor.dk/internalbrowser). Trigger keyword `md`. It should show a live preview of the Markdown file I type the path of.
 
 ### Converting a plugin from another launcher
 
